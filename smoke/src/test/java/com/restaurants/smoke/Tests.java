@@ -84,12 +84,12 @@ public class Tests {
 		test.log(LogStatus.INFO, "Set Password");
 		restaurants.setConfirmPassword("12345678");
 		test.log(LogStatus.INFO, "Confirm Password");
-		/*restaurants.clickCreateAccountButton();
+		restaurants.clickCreateAccountButton();
 		test.log(LogStatus.INFO, "Click Create Account Button");
 		restaurants.clickCompleteReservationButton();
 		test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
-		test.log(LogStatus.INFO, "Application is Closing...");*/
+		test.log(LogStatus.INFO, "Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		
 		
