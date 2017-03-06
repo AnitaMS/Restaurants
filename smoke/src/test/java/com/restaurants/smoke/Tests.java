@@ -50,8 +50,8 @@ public class Tests {
 
 DesiredCapabilities cap = DesiredCapabilities.firefox();
 cap.setCapability("marionette", true);
-driver = new RemoteWebDriver(cap);
- //driver = new FirefoxDriver(cap);
+
+ driver = new FirefoxDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
@@ -71,9 +71,9 @@ driver = new RemoteWebDriver(cap);
 DesiredCapabilities cap = DesiredCapabilities.chrome();
 
 cap.setCapability("marionette", true);
-//cap.setCapability("recreateChromeDriverSessions", true);
-driver = new RemoteWebDriver(cap);
-// driver = new ChromeDriver(cap);
+cap.setCapability("recreateChromeDriverSessions", true);
+
+ driver = new ChromeDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
