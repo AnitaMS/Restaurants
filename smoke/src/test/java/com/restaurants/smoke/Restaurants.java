@@ -102,10 +102,21 @@ public class Restaurants {
 	}
 
 	public void selectReservationTime() throws InterruptedException {
+		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,100)", "");
-		Thread.sleep(1000);
-		js.executeScript("arguments[0].click();", reservationTime);
+		js.executeScript("window.scrollBy(0,1000)", "");
+		Thread.sleep(3000);
+		Random r = new java.util.Random();
+		List<WebElement> links = driver.findElements(By.xpath(".//a[@class='btn btn-primary']"));
+		if (!links.isEmpty()) {
+			WebElement randomElement = links.get(r.nextInt(links.size()));
+		//	randomElement.click();
+			js.executeScript("arguments[0].click();", randomElement);
+		}		
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0,100)", "");
+		//Thread.sleep(1000);
+		//js.executeScript("arguments[0].click();", reservationTime);
 	}
 
 	public void clickCreateAccount() {
