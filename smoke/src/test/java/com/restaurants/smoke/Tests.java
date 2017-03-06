@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -49,7 +50,8 @@ public class Tests {
 
 DesiredCapabilities cap = DesiredCapabilities.firefox();
 cap.setCapability("marionette", true);
- driver = new FirefoxDriver(cap);
+driver = new RemoteWebDriver(cap);
+ //driver = new FirefoxDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
@@ -67,8 +69,11 @@ cap.setCapability("marionette", true);
 			
 
 DesiredCapabilities cap = DesiredCapabilities.chrome();
+
 cap.setCapability("marionette", true);
- driver = new ChromeDriver(cap);
+//cap.setCapability("recreateChromeDriverSessions", true);
+driver = new RemoteWebDriver(cap);
+// driver = new ChromeDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
