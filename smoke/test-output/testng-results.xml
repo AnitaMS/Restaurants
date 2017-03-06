@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="1" failed="0" total="2" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[PASS]]>
+      <![CDATA[|PASS  Verifying reservation is successfful]]>
+    </line>
+    <line>
+      <![CDATA[[Actual value = My reservations]]>
+    </line>
+    <line>
+      <![CDATA[|Expected value = My reservations]]>
     </line>
     <line>
       <![CDATA[PASS]]>
     </line>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="37677" started-at="2017-03-04T13:47:53Z" finished-at="2017-03-04T13:48:31Z">
+  <suite name="TestSuite" duration-ms="79538" started-at="2017-03-06T01:02:43Z" finished-at="2017-03-06T01:04:03Z">
     <groups>
     </groups>
-    <test name="Chrome Test" duration-ms="16098" started-at="2017-03-04T13:47:53Z" finished-at="2017-03-04T13:48:10Z">
+    <test name="Chrome Test" duration-ms="33827" started-at="2017-03-06T01:02:43Z" finished-at="2017-03-06T01:03:17Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@47c62251]" name="beforeClass" is-config="true" duration-ms="7092" started-at="2017-03-04T14:47:53Z" finished-at="2017-03-04T14:48:01Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@42e26948]" name="beforeClass" is-config="true" duration-ms="22854" started-at="2017-03-06T02:02:43Z" finished-at="2017-03-06T02:03:06Z">
           <params>
             <param index="0">
               <value>
@@ -24,15 +30,24 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@47c62251]" name="restaurantsSmokeTest" duration-ms="8625" started-at="2017-03-04T14:48:01Z" finished-at="2017-03-04T14:48:09Z">
+        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@42e26948]" name="restaurantsSmokeTest" duration-ms="10331" started-at="2017-03-06T02:03:06Z" finished-at="2017-03-06T02:03:17Z">
           <reporter-output>
+            <line>
+              <![CDATA[|PASS  Verifying reservation is successfful]]>
+            </line>
+            <line>
+              <![CDATA[[Actual value = My reservations]]>
+            </line>
+            <line>
+              <![CDATA[|Expected value = My reservations]]>
+            </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@47c62251]" name="writeResult" is-config="true" duration-ms="4" started-at="2017-03-04T14:48:09Z" finished-at="2017-03-04T14:48:09Z">
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@42e26948]" name="writeResult" is-config="true" duration-ms="1" started-at="2017-03-06T02:03:17Z" finished-at="2017-03-06T02:03:17Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=restaurantsSmokeTest status=SUCCESS method=Tests.restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@47c62251] output={null}]]]>
+                <![CDATA[[TestResult name=restaurantsSmokeTest status=SUCCESS method=Tests.restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@42e26948] output=|PASS  Verifying reservation is successfful]]]>
               </value>
             </param>
           </params>
@@ -42,15 +57,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@47c62251]" name="close" is-config="true" duration-ms="348" started-at="2017-03-04T14:48:09Z" finished-at="2017-03-04T14:48:10Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@42e26948]" name="close" is-config="true" duration-ms="613" started-at="2017-03-06T02:03:17Z" finished-at="2017-03-06T02:03:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- com.restaurants.smoke.Tests -->
     </test> <!-- Chrome Test -->
-    <test name="FireFox Test" duration-ms="21570" started-at="2017-03-04T13:48:10Z" finished-at="2017-03-04T13:48:31Z">
+    <test name="FireFox Test" duration-ms="45676" started-at="2017-03-06T01:03:17Z" finished-at="2017-03-06T01:04:03Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@1a968a59]" name="beforeClass" is-config="true" duration-ms="11579" started-at="2017-03-04T14:48:10Z" finished-at="2017-03-04T14:48:21Z">
+        <test-method status="FAIL" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@589838eb]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-03-06T02:03:17Z" finished-at="2017-03-06T02:03:17Z">
           <params>
             <param index="0">
               <value>
@@ -58,28 +73,192 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Failed to connect to binary FirefoxBinary(/usr/bin/firefox) on port 7055; process output follows: 
+ription":"Ubuntu 火狐扩展包.","creator":"Canonical Ltd.","homepageURL":null},{"locales":["zh-TW"],"name":"Ubuntu Modifications","description":"Ubuntu Firefox 擴充包。","creator":"Canonical Ltd.","homepageURL":null}],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"9.0","maxVersion":"37.0a1"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1488762201256	DeferredSave.extensions.json	DEBUG	Save changes
+1488762201256	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1488762201256	addons.xpi-utils	DEBUG	Updating add-on states
+1488762201257	addons.xpi-utils	DEBUG	Writing add-ons list
+1488762201259	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi
+1488762201259	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 1.0
+1488762201260	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi
+1488762201260	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.7
+1488762201261	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/firefox@getpocket.com.xpi
+1488762201261	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1488762201262	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org.xpi
+1488762201264	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi
+1488762201265	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi
+1488762201267	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+1488762201267	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1488762201289	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1488762201290	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1488762201290	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Starting provider: GMPProvider
+1488762201314	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1488762201315	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1488762201315	addons.manager	DEBUG	Starting provider: PluginProvider
+1488762201315	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1488762201315	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1488762201316	addons.manager	DEBUG	Completed startup sequence
+1488762203410	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1488762203410	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1488762203411	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1488762203550	DeferredSave.extensions.json	DEBUG	Write succeeded
+1488762203550	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1488762203550	DeferredSave.extensions.json	DEBUG	Starting timer
+1488762203561	addons.repository	DEBUG	No addons.json found.
+1488762203562	DeferredSave.addons.json	DEBUG	Save changes
+1488762203564	DeferredSave.addons.json	DEBUG	Starting timer
+1488762203691	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1488762203691	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1488762203691	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1488762203709	DeferredSave.extensions.json	DEBUG	Starting write
+1488762203710	DeferredSave.addons.json	DEBUG	Starting write
+1488762203735	DeferredSave.extensions.json	DEBUG	Write succeeded
+1488762203738	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'anita-X550LD', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-65-generic', java.version: '1.8.0_121'
+Driver info: driver.version: FirefoxDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/usr/bin/firefox) on port 7055; process output follows: 
+ription":"Ubuntu 火狐扩展包.","creator":"Canonical Ltd.","homepageURL":null},{"locales":["zh-TW"],"name":"Ubuntu Modifications","description":"Ubuntu Firefox 擴充包。","creator":"Canonical Ltd.","homepageURL":null}],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"9.0","maxVersion":"37.0a1"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1488762201256	DeferredSave.extensions.json	DEBUG	Save changes
+1488762201256	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1488762201256	addons.xpi-utils	DEBUG	Updating add-on states
+1488762201257	addons.xpi-utils	DEBUG	Writing add-ons list
+1488762201259	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi
+1488762201259	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 1.0
+1488762201260	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi
+1488762201260	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.7
+1488762201261	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/firefox@getpocket.com.xpi
+1488762201261	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1488762201262	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org.xpi
+1488762201264	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi
+1488762201265	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi
+1488762201267	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+1488762201267	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1488762201289	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1488762201290	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1488762201290	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Starting provider: GMPProvider
+1488762201314	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1488762201315	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1488762201315	addons.manager	DEBUG	Starting provider: PluginProvider
+1488762201315	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1488762201315	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1488762201316	addons.manager	DEBUG	Completed startup sequence
+1488762203410	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1488762203410	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1488762203411	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1488762203550	DeferredSave.extensions.json	DEBUG	Write succeeded
+1488762203550	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1488762203550	DeferredSave.extensions.json	DEBUG	Starting timer
+1488762203561	addons.repository	DEBUG	No addons.json found.
+1488762203562	DeferredSave.addons.json	DEBUG	Save changes
+1488762203564	DeferredSave.addons.json	DEBUG	Starting timer
+1488762203691	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1488762203691	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1488762203691	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1488762203709	DeferredSave.extensions.json	DEBUG	Starting write
+1488762203710	DeferredSave.addons.json	DEBUG	Starting write
+1488762203735	DeferredSave.extensions.json	DEBUG	Write succeeded
+1488762203738	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
+System info: host: 'anita-X550LD', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-65-generic', java.version: '1.8.0_121'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:124)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:119)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:218)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:120)
+	at com.restaurants.smoke.Tests.beforeClass(Tests.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+ription":"Ubuntu 火狐扩展包.","creator":"Canonical Ltd.","homepageURL":null},{"locales":["zh-TW"],"name":"Ubuntu Modifications","description":"Ubuntu Firefox 擴充包。","creator":"Canonical Ltd.","homepageURL":null}],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"9.0","maxVersion":"37.0a1"}],"targetPlatforms":[],"multiprocessCompatible":false,"signedState":2,"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"mpcOptedOut":false}
+1488762201256	DeferredSave.extensions.json	DEBUG	Save changes
+1488762201256	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1488762201256	addons.xpi-utils	DEBUG	Updating add-on states
+1488762201257	addons.xpi-utils	DEBUG	Writing add-ons list
+1488762201259	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/aushelper@mozilla.org.xpi
+1488762201259	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 1.0
+1488762201260	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/e10srollout@mozilla.org.xpi
+1488762201260	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.7
+1488762201261	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/firefox@getpocket.com.xpi
+1488762201261	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1488762201262	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-bs@firefox.mozilla.org.xpi
+1488762201264	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-GB@firefox.mozilla.org.xpi
+1488762201265	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/extensions/langpack-en-ZA@firefox.mozilla.org.xpi
+1488762201267	addons.xpi	DEBUG	Registering manifest for /usr/lib/firefox/browser/features/webcompat@mozilla.org.xpi
+1488762201267	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.0
+1488762201289	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1488762201290	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1488762201290	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1488762201290	addons.manager	DEBUG	Starting provider: GMPProvider
+1488762201314	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1488762201315	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1488762201315	addons.manager	DEBUG	Starting provider: PluginProvider
+1488762201315	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1488762201315	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1488762201316	addons.manager	DEBUG	Completed startup sequence
+1488762203410	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1488762203410	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1488762203411	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1488762203550	DeferredSave.extensions.json	DEBUG	Write succeeded
+1488762203550	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1488762203550	DeferredSave.extensions.json	DEBUG	Starting timer
+1488762203561	addons.repository	DEBUG	No addons.json found.
+1488762203562	DeferredSave.addons.json	DEBUG	Save changes
+1488762203564	DeferredSave.addons.json	DEBUG	Starting timer
+1488762203691	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1488762203691	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1488762203691	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1488762203709	DeferredSave.extensions.json	DEBUG	Starting write
+1488762203710	DeferredSave.addons.json	DEBUG	Starting write
+1488762203735	DeferredSave.extensions.json	DEBUG	Write succeeded
+1488762203738	DeferredSave.addons.json	DEBUG	Write succeeded
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+	... 20 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@1a968a59]" name="restaurantsSmokeTest" duration-ms="9484" started-at="2017-03-04T14:48:21Z" finished-at="2017-03-04T14:48:31Z">
+        <test-method status="SKIP" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@589838eb]" name="restaurantsSmokeTest" duration-ms="1" started-at="2017-03-06T02:04:03Z" finished-at="2017-03-06T02:04:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@1a968a59]" name="writeResult" is-config="true" duration-ms="1" started-at="2017-03-04T14:48:31Z" finished-at="2017-03-04T14:48:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=restaurantsSmokeTest status=SUCCESS method=Tests.restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@1a968a59] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@589838eb]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-06T02:04:03Z" finished-at="2017-03-06T02:04:03Z">
           <reporter-output>
-            <line>
-              <![CDATA[PASS]]>
-            </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@1a968a59]" name="close" is-config="true" duration-ms="502" started-at="2017-03-04T14:48:31Z" finished-at="2017-03-04T14:48:31Z">
+        <test-method status="SKIP" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@589838eb]" name="close" is-config="true" duration-ms="0" started-at="2017-03-06T02:04:03Z" finished-at="2017-03-06T02:04:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
