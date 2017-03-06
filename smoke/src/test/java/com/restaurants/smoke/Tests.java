@@ -18,7 +18,6 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
@@ -30,9 +29,10 @@ public class Tests {
 	ExtentReports report;
 	ExtentTest test;
 
+	
+	@BeforeClass(alwaysRun=true)
 	@Parameters("browserType")
-	@BeforeTest
-	public void beforeClass( String browser) {
+	public void beforeClass( @Optional("firefox")String browser) {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
@@ -44,11 +44,8 @@ public class Tests {
 			report.addSystemInfo(sysInfo);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");						
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-impl-side-painting");
-			
-			driver = new ChromeDriver(options);
+			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");										
+			driver = new ChromeDriver();
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
