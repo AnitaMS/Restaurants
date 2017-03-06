@@ -15,7 +15,6 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 <build>
- 
      <pluginManagement>
      <plugins>
       <plugin>
@@ -31,27 +30,12 @@
           </execution>
           <execution>
             <id>verify</id>
-            <goals>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-       <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-surefire-plugin</artifactId>
-         <version>2.19.1</version>    
-         
-          <executions>
-        <execution>
-            <id>default</id>
-            <goals>
+              <goals>
                 <goal>test</goal>
             </goals>
-            <configuration>
-                <pomFileName>subdir/pom.xml</pomFileName>
-                
-                        <properties>
+                  <configuration>
+                <pomFileName>subdir/pom.xml</pomFileName>    
+         <properties>
    <property>
      <name>parallel</name>
      <value>methods</value>
@@ -59,11 +43,10 @@
  </properties>
   <suiteXmlFiles>
    <suiteXmlFile>testng.xml</suiteXmlFile>
-</suiteXmlFiles>
-                
+</suiteXmlFiles>              
             </configuration>
-        </execution>
-    </executions>  
+          </execution>
+        </executions>    
        </plugin>
      </plugins>
    </pluginManagement> 
