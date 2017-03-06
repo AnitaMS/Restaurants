@@ -68,7 +68,7 @@ cap.setCapability("marionette", true);
 
 DesiredCapabilities cap = DesiredCapabilities.chrome();
 cap.setCapability("marionette", true);
- driver = new FirefoxDriver(cap);
+ driver = new ChromeDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
