@@ -18,6 +18,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class Tests {
@@ -30,7 +31,7 @@ public class Tests {
 
 	@Parameters("browserType")
 	@BeforeClass
-	public void beforeClass(String browser) {
+	public void beforeClass( @Optional String browser) {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
