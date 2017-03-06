@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -36,7 +37,19 @@ public class Tests {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
-			driver = new FirefoxDriver();
+			//driver = new FirefoxDriver();
+			
+			
+			
+			
+			
+			
+			
+			
+
+DesiredCapabilities cap = DesiredCapabilities.firefox();
+cap.setCapability("marionette", true);
+ driver = new FirefoxDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
@@ -45,7 +58,17 @@ public class Tests {
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");										
-			driver = new ChromeDriver();
+			//driver = new ChromeDriver();
+			
+			
+			
+			
+			
+			
+
+DesiredCapabilities cap = DesiredCapabilities.chrome();
+cap.setCapability("marionette", true);
+ driver = new FirefoxDriver(cap);
 			report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
