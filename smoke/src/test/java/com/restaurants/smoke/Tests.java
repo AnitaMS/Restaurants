@@ -33,7 +33,7 @@ public class Tests {
 
 	@BeforeClass(alwaysRun = true)
 	@Parameters("browserType")
-	public void beforeClass(@Optional("firefox") String browser) {
+	public void beforeClass(@Optional String browser) {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
