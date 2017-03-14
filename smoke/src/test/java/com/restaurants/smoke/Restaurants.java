@@ -163,7 +163,7 @@ public class Restaurants {
 	        Assert.fail();
 			Reporter.log("|FAIL  Verifying reservation is successfful", true);
 		}
-		 Reporter.log("[Actual value = " + actual, true);
+		 Reporter.log("|Actual value = " + actual, true);
 	     Reporter.log("|Expected value = " + expected, true);
 	   }
 	}
