@@ -29,7 +29,7 @@ public class Tests {
 	///ExtentReportffs report;
 	///9//77ExtentTest test;//////
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeClass
 	@Parameters( "browserType")
 	public void beforeClass(String browser) {
 

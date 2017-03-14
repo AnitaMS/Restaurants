@@ -26,12 +26,12 @@
       <![CDATA[PASS]]>
     </line>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="43371" started-at="2017-03-14T15:12:17Z" finished-at="2017-03-14T15:13:01Z">
+  <suite name="TestSuite" duration-ms="51055" started-at="2017-03-14T19:29:03Z" finished-at="2017-03-14T19:29:54Z">
     <groups>
     </groups>
-    <test name="Chrome Test" duration-ms="18720" started-at="2017-03-14T15:12:17Z" finished-at="2017-03-14T15:12:36Z">
+    <test name="Chrome Test" duration-ms="21990" started-at="2017-03-14T19:29:03Z" finished-at="2017-03-14T19:29:25Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="beforeClass" is-config="true" duration-ms="5587" started-at="2017-03-14T16:12:17Z" finished-at="2017-03-14T16:12:23Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="beforeClass" is-config="true" duration-ms="8786" started-at="2017-03-14T20:29:03Z" finished-at="2017-03-14T20:29:12Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +42,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="restaurantsSmokeTest" duration-ms="13031" started-at="2017-03-14T16:12:23Z" finished-at="2017-03-14T16:12:36Z">
+        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="restaurantsSmokeTest" duration-ms="13046" started-at="2017-03-14T20:29:12Z" finished-at="2017-03-14T20:29:25Z">
           <reporter-output>
             <line>
               <![CDATA[|PASS  Verifying reservation is successfful]]>
@@ -55,7 +55,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-14T16:12:36Z" finished-at="2017-03-14T16:12:36Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="close" is-config="true" duration-ms="133" started-at="2017-03-14T20:29:25Z" finished-at="2017-03-14T20:29:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-14T20:29:25Z" finished-at="2017-03-14T20:29:25Z">
           <params>
             <param index="0">
               <value>
@@ -69,26 +73,22 @@
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@4bec1f0c]" name="close" is-config="true" duration-ms="77" started-at="2017-03-14T16:12:36Z" finished-at="2017-03-14T16:12:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
       </class> <!-- com.restaurants.smoke.Tests -->
     </test> <!-- Chrome Test -->
-    <test name="FireFox Test" duration-ms="24634" started-at="2017-03-14T15:12:36Z" finished-at="2017-03-14T15:13:01Z">
+    <test name="FireFox Test" duration-ms="29023" started-at="2017-03-14T19:29:25Z" finished-at="2017-03-14T19:29:54Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="beforeClass" is-config="true" duration-ms="11365" started-at="2017-03-14T16:12:36Z" finished-at="2017-03-14T16:12:47Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="beforeClass" is-config="true" duration-ms="13287" started-at="2017-03-14T20:29:25Z" finished-at="2017-03-14T20:29:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="restaurantsSmokeTest" duration-ms="13105" started-at="2017-03-14T16:12:47Z" finished-at="2017-03-14T16:13:00Z">
+        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="restaurantsSmokeTest" duration-ms="14389" started-at="2017-03-14T20:29:38Z" finished-at="2017-03-14T20:29:52Z">
           <reporter-output>
             <line>
               <![CDATA[|PASS  Verifying reservation is successfful]]>
@@ -101,7 +101,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-14T16:13:00Z" finished-at="2017-03-14T16:13:00Z">
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-14T20:29:52Z" finished-at="2017-03-14T20:29:52Z">
           <params>
             <param index="0">
               <value>
@@ -115,7 +115,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="close" is-config="true" duration-ms="160" started-at="2017-03-14T16:13:00Z" finished-at="2017-03-14T16:13:01Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@4e1d422d]" name="close" is-config="true" duration-ms="1332" started-at="2017-03-14T20:29:52Z" finished-at="2017-03-14T20:29:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
