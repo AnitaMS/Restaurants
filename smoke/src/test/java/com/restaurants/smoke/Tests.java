@@ -1,9 +1,7 @@
 package com.restaurants.smoke;
 
 import org.testng.annotations.Test;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
@@ -11,16 +9,16 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
+
 import org.testng.annotations.Parameters;
 
 public class Tests {
@@ -29,7 +27,7 @@ public class Tests {
 	Restaurants restaurants;
 	final String randomEmail = null;
 	///ExtentReports report;
-	////77ExtentTest test;
+	///9//77ExtentTest test;//////
 
 	@BeforeClass(alwaysRun = true)
 	@Parameters( "browserType")
