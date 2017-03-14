@@ -29,7 +29,7 @@ public class Tests {
 	Restaurants restaurants;
 	final String randomEmail = null;
 	///ExtentReports report;
-	////ExtentTest test;
+	////7ExtentTest test;
 
 	@BeforeClass(alwaysRun = true)
 	@Parameters( "browserType")
