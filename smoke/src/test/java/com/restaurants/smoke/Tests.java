@@ -27,7 +27,7 @@ public class Tests {
 	Restaurants restaurants;
 	final String randomEmail = null;
 	///ExtentReportffs report;
-	///9//77ExtentTest test;//////
+	///9//77ExtentTest test;///gg///
 
 	@BeforeClass
 	@Parameters( "browserType")
