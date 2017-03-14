@@ -26,7 +26,7 @@ public class Tests {
 	private String baseUrl;
 	Restaurants restaurants;
 	final String randomEmail = null;
-	///ExtentReports report;
+	///ExtentReportffs report;
 	///9//77ExtentTest test;//////
 
 	@BeforeClass(alwaysRun = true)
