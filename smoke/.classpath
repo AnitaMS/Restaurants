@@ -23,5 +23,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/selenium-server-standalone-3.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/selenium-java-3.0.1.zip"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
