@@ -32,7 +32,7 @@ public class Tests {
 	///ExtentTest test;
 
 	@BeforeClass(alwaysRun = true)
-	@Parameters("browserType")
+	@Parameters( "browserType")
 	public void beforeClass(String browser) {
 
 		if (browser.equalsIgnoreCase("firefox")) {
