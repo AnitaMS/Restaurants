@@ -42,9 +42,9 @@ public class Tests {
 
 			driver = new FirefoxDriver(cap);
 			//report = new ExtentReports("/home/anita/Desktop/RestaurantsFireFox.html");
-			Map<String, String> sysInfo = new HashMap<String, String>();
-			sysInfo.put("Selenium Version", "3.0.1");
-			sysInfo.put("TestNG Version", "6.10");
+			//Map<String, String> sysInfo = new HashMap<String, String>();
+			//sysInfo.put("Selenium Version", "3.0.1");
+			//sysInfo.put("TestNG Version", "6.10");
 			//report.addSystemInfo(sysInfo);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
@@ -58,9 +58,9 @@ public class Tests {
 
 			driver = new ChromeDriver(cap);
 			//report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
-			Map<String, String> sysInfo = new HashMap<String, String>();
-			sysInfo.put("Selenium Version", "3.0.1");
-			sysInfo.put("TestNG Version", "6.10");
+			//Map<String, String> sysInfo = new HashMap<String, String>();
+			//sysInfo.put("Selenium Version", "3.0.1");
+			//sysInfo.put("TestNG Version", "6.10");
 			//report.addSystemInfo(sysInfo);
 		}
 
