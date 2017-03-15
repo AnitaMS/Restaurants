@@ -37,7 +37,7 @@ public class Tests {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
 			 driver = new FirefoxDriver();
 
-			//DesiredCapabilities cap = DesiredCapabilities.firefox();
+			////DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 
 			//driver = new FirefoxDriver(cap);
