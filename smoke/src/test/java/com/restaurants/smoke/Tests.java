@@ -35,12 +35,12 @@ public class Tests {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
-			// driver = new FirefoxDriver();
+			 driver = new FirefoxDriver();
 
-			DesiredCapabilities cap = DesiredCapabilities.firefox();
-			cap.setCapability("marionette", true);
+			//DesiredCapabilities cap = DesiredCapabilities.firefox();
+			//cap.setCapability("marionette", true);
 
-			driver = new FirefoxDriver(cap);
+			//driver = new FirefoxDriver(cap);
 			//report = new ExtentReports("/home/anita/Desktop/RestaurantsFireFox.html");
 			//Map<String, String> sysInfo = new HashMap<String, String>();
 			//sysInfo.put("Selenium Version", "3.0.1");
