@@ -55,9 +55,9 @@ public class Tests {
 
 			cap.setCapability("marionette", true);
 			cap.setCapability("recreateChromeDriverSessions", true);
-
+////
 			driver = new ChromeDriver(cap);
-			//report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
+			///report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
 			//Map<String, String> sysInfo = new HashMap<String, String>();
 			//sysInfo.put("Selenium Version", "3.0.1");
 			//sysInfo.put("TestNG Version", "6.10");

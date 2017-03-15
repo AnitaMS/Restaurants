@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite" parallel="methods">
-
+	<parameter name="browserType" value="firefox"/>	
 
 <test name="Chrome Test">
 <parameter name="browserType" value="chrome"/>
@@ -11,7 +11,7 @@
 		</classes>
 		</test>
 		<test name="FireFox Test">
-	<parameter name="browserType" value="firefox"/>	
+
 		<classes>
 		<class name="com.restaurants.smoke.Tests">
 		</class>
