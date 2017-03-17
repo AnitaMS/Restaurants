@@ -18,7 +18,7 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class Tests {
@@ -27,11 +27,11 @@ public class Tests {
 	Restaurants restaurants;
 	final String randomEmail = null;
 	///ExtentReportffs report;
-	///9//77ExtentTest test;///gg///
+	///9//77ExtenthhTest test;///gg///
 
 	@BeforeClass
 	@Parameters( "browserType")
-	public void beforeClass(String browser) {
+	public void beforeClass(@Optional String browser) {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
@@ -123,6 +123,7 @@ public class Tests {
 			//test.log(LogStatus.FAIL, "SKIP");
 			Reporter.log("SKIP");
 		}
+		
 	}
 
 	@AfterClass
