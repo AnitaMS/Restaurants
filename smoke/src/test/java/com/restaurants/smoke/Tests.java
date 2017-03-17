@@ -22,7 +22,6 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class Tests {
@@ -45,7 +44,7 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			////7driver = new FirefoxDriver(cap);
-			report = new ExtentReports("smoke/test-output/RestaurantsFireFox.html");
+			report = new ExtentReports("smoke/RestaurantsFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -61,7 +60,7 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-			report = new ExtentReports("smoke/test-output/RestaurantsChrome.html");
+			report = new ExtentReports("smoke/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -89,21 +88,21 @@ public class Tests {
 		restaurants.clickFindATableButton();
 		test.log(LogStatus.INFO, "Click on Find A Table button");
 		restaurants.selectReservationTime();
-		//test.log(LogStatus.INFO, "Select Reservation Time");
+		test.log(LogStatus.INFO, "Select Reservation Time");
 		restaurants.clickCreateAccount();
-		//test.log(LogStatus.INFO, "Click Create Accaunt");
+		test.log(LogStatus.INFO, "Click Create Accaunt");
 		restaurants.setFirstName("First");
-		//test.log(LogStatus.INFO, "Set First Name");
+		test.log(LogStatus.INFO, "Set First Name");
 		restaurants.setLastName("Last");
-		//test.log(LogStatus.INFO, "Set Last Name");
+		test.log(LogStatus.INFO, "Set Last Name");
 		restaurants.setEmailR2(randomEmail);
-		//test.log(LogStatus.INFO, "Set Email");
+		test.log(LogStatus.INFO, "Set Email");
 		restaurants.setPassword("12345678");
-		//test.log(LogStatus.INFO, "Set Password");
+		test.log(LogStatus.INFO, "Set Password");
 		restaurants.setConfirmPassword("12345678");
-	//	test.log(LogStatus.INFO, "Confirm Password");
+		test.log(LogStatus.INFO, "Confirm Password");
 		restaurants.clickCreateAccountButton();
-		//test.log(LogStatus.INFO, "Click Create Account Button");
+		test.log(LogStatus.INFO, "Click Create Account Button");
 		restaurants.clickCompleteReservationButton();
 		test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
