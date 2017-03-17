@@ -134,6 +134,7 @@ public class Tests {
 
 		driver.quit();
 		report.endTest(test);
+		
 		report.flush();
 
 	}
