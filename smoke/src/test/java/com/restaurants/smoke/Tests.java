@@ -74,12 +74,14 @@ public class Tests {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		test.log(LogStatus.INFO, "Application Starting...");
+		Reporter.log("Application Starting...");
 	}
 
 	@Test
 	public void restaurantsSmokeTest() throws InterruptedException, ParseException {
 
 		restaurants.clickRestaurant();
+		Reporter.log("Click on restaurant");
 		test.log(LogStatus.INFO, "Click on restaurant");
 		restaurants.clearDateField();
 		test.log(LogStatus.INFO, "Clear date field");
@@ -107,6 +109,7 @@ public class Tests {
 		test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
 		test.log(LogStatus.INFO, "Application is Closing...");
+		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 
 	}
@@ -133,8 +136,8 @@ public class Tests {
 	public void close() {
 
 		
-		report.endTest(test);
-		
+		//report.endTest(test);
+		report.close();
 		report.flush();
 		driver.quit();
 
