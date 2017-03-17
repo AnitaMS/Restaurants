@@ -132,10 +132,11 @@ public class Tests {
 	@AfterClass
 	public void close() {
 
-		driver.quit();
+		
 		report.endTest(test);
 		
 		report.flush();
+		driver.quit();
 
 	}
 
