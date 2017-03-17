@@ -45,7 +45,7 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			////7driver = new FirefoxDriver(cap);
-			report = new ExtentReports("/home/anita/Desktop/RestaurantsFireFox.html");
+			report = new ExtentReports("smoke/test-output/RestaurantsFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -61,7 +61,7 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-			report = new ExtentReports("/home/anita/Desktop/RestaurantsChrome.html");
+			report = new ExtentReports("smoke/test-output/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
