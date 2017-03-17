@@ -27,11 +27,11 @@ public class Tests {
 	Restaurants restaurants;
 	final String randomEmail = null;
 	///ExtentReportffs report;
-	///9//77ExtenthhTest test;///gg///
+	///9//77ExtentTest test;///gg///
 
 	@BeforeClass
-	@Parameters( "browserType")
-	public void beforeClass(@Optional String browser) {
+	@Parameters({ "browserType"})
+	public void beforeClass( String browser) {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
