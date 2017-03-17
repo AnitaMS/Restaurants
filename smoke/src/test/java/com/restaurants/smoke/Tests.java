@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.IExtentTestClass;
 import com.relevantcodes.extentreports.LogStatus;
 
 import java.io.IOException;
@@ -82,7 +83,7 @@ public class Tests {
 
 		restaurants.clickRestaurant();
 		Reporter.log("Click on restaurant");
-		test.log(LogStatus.INFO, "Click on restaurant");
+		((IExtentTestClass) report).log(LogStatus.INFO, "Click on restaurant");
 		restaurants.clearDateField();
 		test.log(LogStatus.INFO, "Clear date field");
 		restaurants.setDate();
