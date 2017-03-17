@@ -44,7 +44,7 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			////7driver = new FirefoxDriver(cap);
-			report = new ExtentReports("smoke/test-output/RestaurantsFireFox.html", true);
+			report = new ExtentReports("smoke/test-output/RestaurantsFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -60,7 +60,7 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-			report = new ExtentReports("smoke/test-output/RestaurantsChrome.html", true);
+			report = new ExtentReports("smoke/test-output/RestaurantsChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -111,6 +111,7 @@ public class Tests {
 		test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
+		
 
 	}
 
@@ -137,8 +138,8 @@ public class Tests {
 
 		
 		report.endTest(test);
-		//report.close();
 		report.flush();
+		report.close();
 		driver.quit();
 
 	}
