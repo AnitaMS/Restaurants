@@ -129,6 +129,7 @@ public class Tests {
 		//report.endTest(test);
 		//report.flush();
 		//report.close();
+		if(driver!=null)
 		driver.quit();
 
 	}
