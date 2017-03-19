@@ -1,8 +1,15 @@
 package com.restaurants.smoke;
 
 import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,8 +27,8 @@ public class Tests {
 	private String baseUrl;
 	Restaurants restaurants;
 	final String randomEmail = null;
-	//ExtentReports report;
-	//ExtentTest test;
+	ExtentReports report;
+	ExtentTest test;
 
 	@BeforeClass
 	@Parameters({ "browserType"})
@@ -35,11 +42,11 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			//driver = new FirefoxDriver(cap);
-	    	//report = new ExtentReports("smoke/test-output/RestaurantsFireFox.html");
-			//Map<String, String> sysInfo = new HashMap<String, String>();
-			//sysInfo.put("Selenium Version", "3.0.1");
-			//sysInfo.put("TestNG Version", "6.10");
-			//report.addSystemInfo(sysInfo);
+	    	report = new ExtentReports("smoke/RFireFox.html");
+			Map<String, String> sysInfo = new HashMap<String, String>();
+			sysInfo.put("Selenium Version", "3.0.1");
+			sysInfo.put("TestNG Version", "6.10");
+			report.addSystemInfo(sysInfo);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");
@@ -51,11 +58,11 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-		//	report = new ExtentReports("smoke/test-output/RestaurantsChrome.html");
-		//	Map<String, String> sysInfo = new HashMap<String, String>();
-		//	sysInfo.put("Selenium Version", "3.0.1");
-		//	sysInfo.put("TestNG Version", "6.10");
-		//	report.addSystemInfo(sysInfo);
+			report = new ExtentReports("smoke/RChrome.html");
+			Map<String, String> sysInfo = new HashMap<String, String>();
+			sysInfo.put("Selenium Version", "3.0.1");
+			sysInfo.put("TestNG Version", "6.10");
+			report.addSystemInfo(sysInfo);
 		}
 
 		restaurants = new Restaurants(driver);
@@ -99,24 +106,24 @@ public class Tests {
 		restaurants.clickCompleteReservationButton();
 		//test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
-		//test.log(LogStatus.INFO, "Application is Closing...");
+		test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
-		//test.assignAuthor("Anita", "Sredic");		
+		test.assignAuthor("Anita", "Sredic");		
 	}
 
 	@AfterMethod
 	public void writeResult(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.SUCCESS) {
-			//test.log(LogStatus.PASS, "PASS");
+			test.log(LogStatus.PASS, "PASS");
 			Reporter.log("PASS");
 		} else if (result.getStatus() == ITestResult.FAILURE) {
-			//test.log(LogStatus.FAIL, "FAIL");
+			test.log(LogStatus.FAIL, "FAIL");
 			Reporter.log("FAIL");
-			//String path = Screenshots.takeScreenshot(driver, result.getName());
-		//	String imagePath = test.addScreenCapture(path);
-			//test.log(LogStatus.FAIL, "FAIL", imagePath);
+			String path = Screenshots.takeScreenshot(driver, result.getName());
+			String imagePath = test.addScreenCapture(path);
+			test.log(LogStatus.FAIL, "FAIL", imagePath);
 		} else if (result.getStatus() == ITestResult.SKIP) {
-			//test.log(LogStatus.FAIL, "SKIP");
+			test.log(LogStatus.FAIL, "SKIP");
 			Reporter.log("SKIP");
 		}
 		
