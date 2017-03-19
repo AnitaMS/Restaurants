@@ -133,9 +133,9 @@ public class Tests {
 	public void close() {
 
 		
-		//report.endTest(test);
-		//report.flush();
-		//report.close();
+		report.endTest(test);
+		report.flush();
+		report.close();
 		if(driver!=null)
 		driver.quit();
 
