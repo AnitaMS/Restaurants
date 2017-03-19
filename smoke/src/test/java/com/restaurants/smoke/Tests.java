@@ -36,16 +36,17 @@ public class Tests {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
-			 driver = new FirefoxDriver();
+			
+			driver = new FirefoxDriver();
 
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 
 			//driver = new FirefoxDriver(cap);
 	  //  	report = new ExtentReports("smoke/RFireFox.html");
-			Map<String, String> sysInfo = new HashMap<String, String>();
-			sysInfo.put("Selenium Version", "3.0.1");
-			sysInfo.put("TestNG Version", "6.10");
+		//	Map<String, String> sysInfo = new HashMap<String, String>();
+		//	sysInfo.put("Selenium Version", "3.0.1");
+		//	sysInfo.put("TestNG Version", "6.10");
 		///	report.addSystemInfo(sysInfo);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
@@ -59,9 +60,9 @@ public class Tests {
 
 			driver = new ChromeDriver(cap);
 		//	report = new ExtentReports("smoke/RChrome.html");
-			Map<String, String> sysInfo = new HashMap<String, String>();
-			sysInfo.put("Selenium Version", "3.0.1");
-			sysInfo.put("TestNG Version", "6.10");
+		//	Map<String, String> sysInfo = new HashMap<String, String>();
+		//	sysInfo.put("Selenium Version", "3.0.1");
+		//	sysInfo.put("TestNG Version", "6.10");
 		//	report.addSystemInfo(sysInfo);
 		}
 
@@ -136,8 +137,9 @@ public class Tests {
 		//report.endTest(test);
 		//report.flush();
 		//report.close();
-		if(driver!=null)
-		driver.quit();
+		if(driver!=null) {
+			driver.close();
+		}
 
 	}
 
