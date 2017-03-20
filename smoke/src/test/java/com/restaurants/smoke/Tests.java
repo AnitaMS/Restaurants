@@ -110,7 +110,8 @@ public class Tests {
 		restaurants.verifyReservationIsCreated();
 	//	test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
-	//	test.assignAuthor("Anita", "Sredic");		
+		test.assignAuthor("Anita", "Sredic");
+		test.assignCategory("Restaurant App - Smoke Test");
 	}
 
 	@AfterMethod
@@ -134,14 +135,14 @@ public class Tests {
 	@AfterClass
 	public void close() {
 
-		
-		report.endTest(test);
-		report.flush();
-		report.close();
 		if(driver!=null) {
 			driver.close();
 		}
 
+		report.endTest(test);
+		report.flush();
+		report.close();
+		
 	}
 
 }
