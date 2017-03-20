@@ -30,6 +30,7 @@ public class Tests {
 	final String randomEmail = null;
 	ExtentReports report;
 	ExtentTest test;
+	//ExtentHtmlReporter htmlReporter;
 
 	@BeforeClass
 	@Parameters({ "browserType"})
@@ -44,7 +45,8 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			//driver = new FirefoxDriver(cap);
-	   	report = new ExtentReports("smoke/resources/RFireFox.html");
+			// htmlReporter = new ExtentHtmlReporter("extent.html");
+	    	report = new ExtentReports("smoke/resources/RFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -65,7 +67,12 @@ public class Tests {
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
+			
 		}
+		
+		
+		 
+       
 
 		restaurants = new Restaurants(driver);
 		baseUrl = "http://polar-crag-51709.herokuapp.com/";
