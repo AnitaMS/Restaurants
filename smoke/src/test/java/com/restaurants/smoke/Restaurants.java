@@ -113,7 +113,7 @@ public class Restaurants {
 		//	randomElement.click();
 			js.executeScript("arguments[0].click();", randomElement);
 		}		
-		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		///JavascriptExecutor js = (JavascriptExecutor) driver;
 		//js.executeScript("window.scrollBy(0,100)", "");
 		//Thread.sleep(1000);
 		//js.executeScript("arguments[0].click();", reservationTime);
