@@ -6,6 +6,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
@@ -27,8 +28,8 @@ public class Tests {
 	private String baseUrl;
 	Restaurants restaurants;
 	final String randomEmail = null;
-	///ExtentReports report;
-//	ExtentTest test;
+	ExtentReports report;
+	ExtentTest test;
 
 	@BeforeClass
 	@Parameters({ "browserType"})
@@ -43,11 +44,11 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			//driver = new FirefoxDriver(cap);
-	  //  	report = new ExtentReports("smoke/RFireFox.html");
-		//	Map<String, String> sysInfo = new HashMap<String, String>();
-		//	sysInfo.put("Selenium Version", "3.0.1");
-		//	sysInfo.put("TestNG Version", "6.10");
-		///	report.addSystemInfo(sysInfo);
+	   	report = new ExtentReports("smoke/resources/RFireFox.html");
+			Map<String, String> sysInfo = new HashMap<String, String>();
+			sysInfo.put("Selenium Version", "3.0.1");
+			sysInfo.put("TestNG Version", "6.10");
+			report.addSystemInfo(sysInfo);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");
@@ -59,20 +60,20 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-		//	report = new ExtentReports("smoke/RChrome.html");
-		//	Map<String, String> sysInfo = new HashMap<String, String>();
-		//	sysInfo.put("Selenium Version", "3.0.1");
-		//	sysInfo.put("TestNG Version", "6.10");
-		//	report.addSystemInfo(sysInfo);
+			report = new ExtentReports("smoke/resources/RChrome.html");
+			Map<String, String> sysInfo = new HashMap<String, String>();
+			sysInfo.put("Selenium Version", "3.0.1");
+			sysInfo.put("TestNG Version", "6.10");
+			report.addSystemInfo(sysInfo);
 		}
 
 		restaurants = new Restaurants(driver);
 		baseUrl = "http://polar-crag-51709.herokuapp.com/";
-		//test = report.startTest("Restaurant App Smoke Test");
+		test = report.startTest("Restaurant App Smoke Test");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
-		//test.log(LogStatus.INFO, "Application Starting...");
+		test.log(LogStatus.INFO, "Application Starting...");
 		Reporter.log("Application Starting...");
 	}
 
@@ -81,9 +82,9 @@ public class Tests {
 
 		restaurants.clickRestaurant();
 		Reporter.log("Click on restaurant");
-		//test.log(LogStatus.INFO, "Click on restaurant");
+		test.log(LogStatus.INFO, "Click on restaurant");
 		restaurants.clearDateField();
-		//test.log(LogStatus.INFO, "Clear date field");
+		test.log(LogStatus.INFO, "Clear date field");
 		restaurants.setDate();
 		//test.log(LogStatus.INFO, "Set date");
 		restaurants.clickFindATableButton();
@@ -115,16 +116,16 @@ public class Tests {
 	@AfterMethod
 	public void writeResult(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.SUCCESS) {
-		//	test.log(LogStatus.PASS, "PASS");
+			test.log(LogStatus.PASS, "PASS");
 			Reporter.log("PASS");
 		} else if (result.getStatus() == ITestResult.FAILURE) {
-		//	test.log(LogStatus.FAIL, "FAIL");
-			Reporter.log("FAIL");
-		//	String path = Screenshots.takeScreenshot(driver, result.getName());
-		//	String imagePath = test.addScreenCapture(path);
-		//	test.log(LogStatus.FAIL, "FAIL", imagePath);
+			test.log(LogStatus.FAIL, "FAIL");
+			Reporter.log("FAIL");			
+			String path = Screenshots.takeScreenshot(driver, result.getName());
+			String imagePath = test.addScreenCapture(path);
+			test.log(LogStatus.FAIL, "FAIL", imagePath);
 		} else if (result.getStatus() == ITestResult.SKIP) {
-		//	test.log(LogStatus.FAIL, "SKIP");
+			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
 		
@@ -134,9 +135,9 @@ public class Tests {
 	public void close() {
 
 		
-		//report.endTest(test);
-		//report.flush();
-		//report.close();
+		report.endTest(test);
+		report.flush();
+		report.close();
 		if(driver!=null) {
 			driver.close();
 		}
