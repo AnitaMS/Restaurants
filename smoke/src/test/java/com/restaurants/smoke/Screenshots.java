@@ -9,7 +9,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class Screenshots {
-	
+	///77fff
 	public static String takeScreenshot(WebDriver driver, String fileName) throws IOException {
 		fileName = fileName + ".png";
 		String directory = "smoke/";
