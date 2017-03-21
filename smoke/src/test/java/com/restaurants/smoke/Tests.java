@@ -6,14 +6,19 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -48,7 +53,6 @@ public class Tests {
 
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
-
 			//driver = new FirefoxDriver(cap);
 	    	report = new ExtentReports("smoke/reports/ReportFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
@@ -149,17 +153,19 @@ public class Tests {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
+		if(driver!=null) {
+			driver.close();
+		
+		}
 		
 	}
 
 	@AfterClass
 	public void close() {
 
-		if(driver!=null) {
-			driver.close();
-		
-		}
+	
 
+		
 		report.endTest(test);
 		report.flush();
 		report.close();
