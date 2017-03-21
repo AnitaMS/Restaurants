@@ -2,10 +2,10 @@ package com.restaurants.smoke;
 
 import org.testng.annotations.Test;
 
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.*;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
-import com.aventstack.extentreports.reporter.*;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
@@ -27,9 +27,7 @@ public class Tests {
 	private String baseUrl;
 	Restaurants restaurants;
 	final String randomEmail = null;
-	//ExtentReports report;
-	//ExtentTest test;
-	ExtentHtmlReporter report;
+	ExtentReports report;
 	ExtentTest test;
 
 
@@ -49,12 +47,11 @@ public class Tests {
 			//cap.setCapability("marionette", true);
 
 			//driver = new FirefoxDriver(cap);
-			report = new ExtentHtmlReporter("/resources/RFireFox.html");
-	    	//report = new ExtentReports("smoke/resources/RFireFox.html");
-			//Map<String, String> sysInfo = new HashMap<String, String>();
-			//sysInfo.put("Selenium Version", "3.0.1");
-			//sysInfo.put("TestNG Version", "6.10");
-			//report.addSystemInfo(sysInfo);
+	    	report = new ExtentReports("smoke/resources/RrrrrrrrrrrFireFox.html");
+			Map<String, String> sysInfo = new HashMap<String, String>();
+			sysInfo.put("Selenium Version", "3.0.1");
+			sysInfo.put("TestNG Version", "6.10");
+			report.addSystemInfo(sysInfo);
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");
@@ -66,35 +63,30 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-			report = new ExtentHtmlReporter("/resources/RChrome.html");
-			//Map<String, String> sysInfo = new HashMap<String, String>();
-			//sysInfo.put("Selenium Version", "3.0.1");
-			//sysInfo.put("TestNG Version", "6.10");
-			//report.addSystemInfo(sysInfo);
+			report = new ExtentReports("smoke/resources/RrrrrrrrrrChrome.html");
+			Map<String, String> sysInfo = new HashMap<String, String>();
+			sysInfo.put("Selenium Version", "3.0.1");
+			sysInfo.put("TestNG Version", "6.10");
+			report.addSystemInfo(sysInfo);
 			
 		}
-		ExtentReports extent = new ExtentReports();
-		extent.attachReporter(report);
-		
+	
 	
 
 		restaurants = new Restaurants(driver);
 		baseUrl = "http://polar-crag-51709.herokuapp.com/";
-		//test = extent.startTest("Restaurant App Smoke Test");
+		test = report.startTest("Restaurant App Smoke Test");
 
 		
 		
 		
 		
-		
-	    test = extent.createTest("Restaurant App Smoke Test zzzzzzzzzzzzzzzzzz");
-		test.pass("details");
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		
-		test.log(Status.INFO, "Application Starting...");
+		test.log(LogStatus.INFO, "Application Starting...");
 		Reporter.log("Application Starting...");
 	}
 
@@ -103,9 +95,9 @@ public class Tests {
 
 		restaurants.clickRestaurant();
 		Reporter.log("Click on restaurant");
-		test.log(Status.INFO, "Click on restaurant");
+		test.log(LogStatus.INFO, "Click on restaurant");
 		restaurants.clearDateField();
-		test.log(Status.INFO, "Clear date field");
+		test.log(LogStatus.INFO, "Clear date field");
 		restaurants.setDate();
 		//test.log(LogStatus.INFO, "Set date");
 		restaurants.clickFindATableButton();
@@ -127,9 +119,9 @@ public class Tests {
 		restaurants.clickCreateAccountButton();
 		//test.log(LogStatus.INFO, "Click Create Account Button");
 		restaurants.clickCompleteReservationButton();
-		test.log(Status.INFO, "Click Complete Reservation Button");
+		test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
-		test.log(Status.INFO, "Application is Closing...");
+		test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
@@ -138,21 +130,20 @@ public class Tests {
 	@AfterMethod
 	public void writeResult(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.SUCCESS) {
-			test.log(Status.PASS, "PASS");
+			test.log(LogStatus.PASS, "PASS");
 			Reporter.log("PASS");
 		} else if (result.getStatus() == ITestResult.FAILURE) {
-			test.log(Status.FAIL, "FAIL");
+			test.log(LogStatus.FAIL, "FAIL");
 			Reporter.log("FAIL");			
-			//String path = Screenshots.takeScreenshot(driver, result.getName());
-			//String imagePath = test.addScreenCapture(path);
-			//test.log(Status.FAIL, "FAIL", imagePath);
+			String path = Screenshots.takeScreenshot(driver, result.getName());
+			String imagePath = test.addScreenCapture(path);
+			test.log(LogStatus.FAIL, "FAIL", imagePath);
 			
-			//test.fail("details").addScreenCaptureFromPath("screenshot.png");
 			
 			
 			
 		} else if (result.getStatus() == ITestResult.SKIP) {
-			test.log(Status.SKIP, "SKIP");
+			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
 		
@@ -165,10 +156,10 @@ public class Tests {
 			driver.close();
 		}
 
-		//report.endTest(test);
+		report.endTest(test);
 		report.flush();
+		report.close();
 		
-		//report.close();
 		
 	}
 
