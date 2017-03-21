@@ -8,15 +8,6 @@
       <![CDATA[Click on restaurant]]>
     </line>
     <line>
-      <![CDATA[|PASS  Verifying reservation is successfful]]>
-    </line>
-    <line>
-      <![CDATA[|Actual value = My reservations]]>
-    </line>
-    <line>
-      <![CDATA[|Expected value = My reservations]]>
-    </line>
-    <line>
       <![CDATA[Application is Closing...]]>
     </line>
     <line>
@@ -29,27 +20,18 @@
       <![CDATA[Click on restaurant]]>
     </line>
     <line>
-      <![CDATA[|PASS  Verifying reservation is successfful]]>
-    </line>
-    <line>
-      <![CDATA[|Actual value = My reservations]]>
-    </line>
-    <line>
-      <![CDATA[|Expected value = My reservations]]>
-    </line>
-    <line>
       <![CDATA[Application is Closing...]]>
     </line>
     <line>
       <![CDATA[PASS]]>
     </line>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="49098" started-at="2017-03-21T14:10:12Z" finished-at="2017-03-21T14:11:01Z">
+  <suite name="TestSuite" duration-ms="32192" started-at="2017-03-21T14:55:28Z" finished-at="2017-03-21T14:56:00Z">
     <groups>
     </groups>
-    <test name="Chrome Test" duration-ms="27869" started-at="2017-03-21T14:10:12Z" finished-at="2017-03-21T14:10:40Z">
+    <test name="Chrome Test" duration-ms="15985" started-at="2017-03-21T14:55:28Z" finished-at="2017-03-21T14:55:44Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="beforeClass" is-config="true" duration-ms="13807" started-at="2017-03-21T15:10:12Z" finished-at="2017-03-21T15:10:26Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="beforeClass" is-config="true" duration-ms="15263" started-at="2017-03-21T15:55:28Z" finished-at="2017-03-21T15:55:43Z">
           <params>
             <param index="0">
               <value>
@@ -63,26 +45,21 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="restaurantsSmokeTest" duration-ms="13095" started-at="2017-03-21T15:10:26Z" finished-at="2017-03-21T15:10:39Z">
+        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="restaurantsSmokeTest" duration-ms="22" started-at="2017-03-21T15:55:43Z" finished-at="2017-03-21T15:55:43Z">
           <reporter-output>
             <line>
               <![CDATA[Click on restaurant]]>
-            </line>
-            <line>
-              <![CDATA[|PASS  Verifying reservation is successfful]]>
-            </line>
-            <line>
-              <![CDATA[|Actual value = My reservations]]>
-            </line>
-            <line>
-              <![CDATA[|Expected value = My reservations]]>
             </line>
             <line>
               <![CDATA[Application is Closing...]]>
             </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-21T15:10:39Z" finished-at="2017-03-21T15:10:39Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="close" is-config="true" duration-ms="655" started-at="2017-03-21T15:55:43Z" finished-at="2017-03-21T15:55:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-21T15:55:43Z" finished-at="2017-03-21T15:55:43Z">
           <params>
             <param index="0">
               <value>
@@ -96,15 +73,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="close" is-config="true" duration-ms="893" started-at="2017-03-21T15:10:39Z" finished-at="2017-03-21T15:10:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
       </class> <!-- com.restaurants.smoke.Tests -->
     </test> <!-- Chrome Test -->
-    <test name="FireFox Test" duration-ms="21176" started-at="2017-03-21T14:10:40Z" finished-at="2017-03-21T14:11:01Z">
+    <test name="FireFox Test" duration-ms="16138" started-at="2017-03-21T14:55:44Z" finished-at="2017-03-21T14:56:00Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="beforeClass" is-config="true" duration-ms="8067" started-at="2017-03-21T15:10:40Z" finished-at="2017-03-21T15:10:48Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="beforeClass" is-config="true" duration-ms="16056" started-at="2017-03-21T15:55:44Z" finished-at="2017-03-21T15:56:00Z">
           <params>
             <param index="0">
               <value>
@@ -118,30 +91,17 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="restaurantsSmokeTest" duration-ms="13008" started-at="2017-03-21T15:10:48Z" finished-at="2017-03-21T15:11:01Z">
+        <test-method status="PASS" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="restaurantsSmokeTest" duration-ms="1" started-at="2017-03-21T15:56:00Z" finished-at="2017-03-21T15:56:00Z">
           <reporter-output>
             <line>
               <![CDATA[Click on restaurant]]>
-            </line>
-            <line>
-              <![CDATA[|PASS  Verifying reservation is successfful]]>
-            </line>
-            <line>
-              <![CDATA[|Actual value = My reservations]]>
-            </line>
-            <line>
-              <![CDATA[|Expected value = My reservations]]>
             </line>
             <line>
               <![CDATA[Application is Closing...]]>
             </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="close" is-config="true" duration-ms="94" started-at="2017-03-21T15:11:01Z" finished-at="2017-03-21T15:11:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="writeResult" is-config="true" duration-ms="0" started-at="2017-03-21T15:11:01Z" finished-at="2017-03-21T15:11:01Z">
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="writeResult" is-config="true" duration-ms="1" started-at="2017-03-21T15:56:00Z" finished-at="2017-03-21T15:56:00Z">
           <params>
             <param index="0">
               <value>
@@ -155,6 +115,10 @@
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="close" is-config="true" duration-ms="76" started-at="2017-03-21T15:56:00Z" finished-at="2017-03-21T15:56:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
       </class> <!-- com.restaurants.smoke.Tests -->
     </test> <!-- FireFox Test -->
   </suite> <!-- TestSuite -->
