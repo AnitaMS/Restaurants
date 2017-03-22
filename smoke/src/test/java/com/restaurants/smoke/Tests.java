@@ -168,7 +168,7 @@ public class Tests {
 		
 		report.endTest(test);
 		report.flush();
-		report.close();
+		//report.close();
 		
 		
 	}
