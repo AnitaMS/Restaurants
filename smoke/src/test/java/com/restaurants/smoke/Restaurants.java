@@ -155,7 +155,7 @@ public class Restaurants {
 	public void verifyReservationIsCreated() {
 		String actual = myRegistrationText.getText();
 		System.out.println(actual);
-		String expected = "My reservations";
+		String expected = "My reservationsxxx";
 	    Assert.assertEquals(actual, actual);
 		if (actual.equals(expected)) {
 			Reporter.log("|PASS  Verifying reservation is successfful");

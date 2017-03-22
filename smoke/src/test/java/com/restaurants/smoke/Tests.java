@@ -2,29 +2,21 @@ package com.restaurants.smoke;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
-import java.io.File;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -41,16 +33,10 @@ public class Tests {
 	@BeforeClass
 	@Parameters({ "browserType"})
 	public void beforeClass( String browser) {
-		 
-	
-		
-		
-		if (browser.equalsIgnoreCase("firefox")) {
 			
-			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
-			
+		if (browser.equalsIgnoreCase("firefox")) {		
+			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");	
 			driver = new FirefoxDriver();
-
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 			//driver = new FirefoxDriver(cap);
@@ -58,48 +44,35 @@ public class Tests {
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
-			report.addSystemInfo(sysInfo);
-	
+			report.addSystemInfo(sysInfo);	
 		}
-		if (browser.equalsIgnoreCase("chrome")) {
-			
-
+		
+		if (browser.equalsIgnoreCase("chrome")) {		
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");
-			// driver = new ChromeDriver();
-
-			
-			
+			// driver = new ChromeDriver();	
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
-
 			cap.setCapability("marionette", true);
 			cap.setCapability("recreateChromeDriverSessions", true);
-
 			driver = new ChromeDriver(cap);
 			report = new ExtentReports("smoke/reports/ReportChrome.html",true);
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
-			report.addSystemInfo(sysInfo);
-			
-			
+			report.addSystemInfo(sysInfo);			
 		}
 	
-	
 		restaurants = new Restaurants(driver);
-		baseUrl = "http://polar-crag-51709.herokuapp.com/";
-		
+		baseUrl = "http://polar-crag-51709.herokuapp.com/";	
 		test = report.startTest("Restaurant App Smoke Test");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.get(baseUrl);
-		
+		driver.get(baseUrl);	
 		test.log(LogStatus.INFO, "Application Starting...");
 		Reporter.log("Application Starting...");
 	}
 
 	@Test
 	public void restaurantsSmokeTest() throws InterruptedException, ParseException {
-
 		restaurants.clickRestaurant();
 		Reporter.log("Click on restaurant");
 		test.log(LogStatus.INFO, "Click on restaurant");
@@ -144,33 +117,25 @@ public class Tests {
 			Reporter.log("FAIL");			
 			String path = Screenshots.takeScreenshot(driver, result.getName());
 			String imagePath = test.addScreenCapture(path);
-			test.log(LogStatus.FAIL, "FAIL", imagePath);
-			
-			
-			
+			test.log(LogStatus.FAIL, "FAIL", imagePath);				
 			
 		} else if (result.getStatus() == ITestResult.SKIP) {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
-		}
-		if(driver!=null) {
-			driver.close();
-		
 		}
 		
 	}
 
 	@AfterClass
 	public void close() {
-
 	
-
+		if(driver!=null) {
+			driver.close();
+		}
 		
 		report.endTest(test);
 		report.flush();
-		//report.close();
-		
-		
+		report.close();	
 	}
 
 }
