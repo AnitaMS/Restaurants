@@ -126,9 +126,7 @@ public class Tests {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
-		if(driver!=null) {
-			driver.close();
-		}
+		
 		
 		
 	}
@@ -136,7 +134,9 @@ public class Tests {
 	@AfterClass
 	public void close() {
 	
-	
+		if(driver!=null) {
+			driver.close();
+		}
 		report.endTest(test);
 		report.flush();
 		report.close();	
