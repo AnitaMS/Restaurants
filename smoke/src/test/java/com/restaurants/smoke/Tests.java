@@ -1,5 +1,7 @@
 package com.restaurants.smoke;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -34,8 +36,7 @@ public class Tests {
 	final String randomEmail = null;
 	ExtentReports report;
 	ExtentTest test;
-	private ExtentReports reporter = SimpleReportFactory.getReporter();
-	ExtentTest testReporter;
+
 
 	@BeforeClass
 	@Parameters({ "browserType"})
@@ -55,15 +56,12 @@ public class Tests {
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 			//driver = new FirefoxDriver(cap);
-			
-		
-			
-			
 	    	report = new ExtentReports("smoke/reports/ReportFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
+			test = report.startTest("Restaurant App Smoke Test");
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
@@ -85,21 +83,20 @@ public class Tests {
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
-			
+			test = report.startTest("Restaurant App Smoke Test");
 			
 		}
-	   testReporter = reporter.startTest("simpleTest001", "This is a simple simpleTest001");
-		testReporter.log(LogStatus.INFO, "Starting test simpleTest001");
+	
 	
 		restaurants = new Restaurants(driver);
 		baseUrl = "http://polar-crag-51709.herokuapp.com/";
-		test = report.startTest("Restaurant App Smoke Test");
-
+		
+	//	test = report.startTest("Restaurant App Smoke Test");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		
-		//test.log(LogStatus.INFO, "Application Starting...");
+		test.log(LogStatus.INFO, "Application Starting...");
 		Reporter.log("Application Starting...");
 	}
 
@@ -170,7 +167,8 @@ public class Tests {
 	public void close() {
 
 	
-		reporter.endTest(testReporter);		
+
+		
 		report.endTest(test);
 		report.flush();
 		//report.close();
