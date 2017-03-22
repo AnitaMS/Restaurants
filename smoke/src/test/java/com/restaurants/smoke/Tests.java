@@ -34,7 +34,8 @@ public class Tests {
 	final String randomEmail = null;
 	ExtentReports report;
 	ExtentTest test;
-
+	private ExtentReports reporter = SimpleReportFactory.getReporter();
+	ExtentTest testReporter;
 
 	@BeforeClass
 	@Parameters({ "browserType"})
@@ -54,6 +55,10 @@ public class Tests {
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 			//driver = new FirefoxDriver(cap);
+			
+		
+			
+			
 	    	report = new ExtentReports("smoke/reports/ReportFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
@@ -83,7 +88,8 @@ public class Tests {
 			
 			
 		}
-	
+	   testReporter = reporter.startTest("simpleTest001", "This is a simple simpleTest001");
+		testReporter.log(LogStatus.INFO, "Starting test simpleTest001");
 	
 		restaurants = new Restaurants(driver);
 		baseUrl = "http://polar-crag-51709.herokuapp.com/";
@@ -93,7 +99,7 @@ public class Tests {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		
-		test.log(LogStatus.INFO, "Application Starting...");
+		//test.log(LogStatus.INFO, "Application Starting...");
 		Reporter.log("Application Starting...");
 	}
 
@@ -164,8 +170,7 @@ public class Tests {
 	public void close() {
 
 	
-
-		
+		reporter.endTest(testReporter);		
 		report.endTest(test);
 		report.flush();
 		//report.close();
