@@ -45,7 +45,7 @@ public class Tests {
 	
 		
 		
-		if (browser.equalsIgnoreCase("firefox")) {
+		//if (browser.equalsIgnoreCase("firefox")) {
 			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
 
 			System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
@@ -61,9 +61,9 @@ public class Tests {
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
-			test = report.startTest("Restaurant App Smoke Test");
-		}
-		if (browser.equalsIgnoreCase("chrome")) {
+	
+		//}
+		/*if (browser.equalsIgnoreCase("chrome")) {
 			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
 
 			System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
@@ -83,15 +83,15 @@ public class Tests {
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
-			test = report.startTest("Restaurant App Smoke Test");
 			
-		}
+			
+		}*/
 	
 	
 		restaurants = new Restaurants(driver);
 		baseUrl = "http://polar-crag-51709.herokuapp.com/";
 		
-	//	test = report.startTest("Restaurant App Smoke Test");
+		test = report.startTest("Restaurant App Smoke Test");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
