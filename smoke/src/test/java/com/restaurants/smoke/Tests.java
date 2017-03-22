@@ -46,9 +46,7 @@ public class Tests {
 		
 		
 		if (browser.equalsIgnoreCase("firefox")) {
-			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
-
-			System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
+			
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
 			
 			driver = new FirefoxDriver();
@@ -64,9 +62,8 @@ public class Tests {
 	
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
+			
 
-			System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");
 			// driver = new ChromeDriver();
 
@@ -103,34 +100,34 @@ public class Tests {
 	@Test
 	public void restaurantsSmokeTest() throws InterruptedException, ParseException {
 
-		//restaurants.clickRestaurant();
+		restaurants.clickRestaurant();
 		Reporter.log("Click on restaurant");
 		test.log(LogStatus.INFO, "Click on restaurant");
-		//restaurants.clearDateField();
+		restaurants.clearDateField();
 		test.log(LogStatus.INFO, "Clear date field");
-		//restaurants.setDate();
-		//test.log(LogStatus.INFO, "Set date");
-		//restaurants.clickFindATableButton();
-		//test.log(LogStatus.INFO, "Click on Find A Table button");
-		//restaurants.selectReservationTime();
-		//test.log(LogStatus.INFO, "Select Reservation Time");
-		//restaurants.clickCreateAccount();
-		//test.log(LogStatus.INFO, "Click Create Accaunt");
-		//restaurants.setFirstName("First");
-		//test.log(LogStatus.INFO, "Set First Name");
-		//restaurants.setLastName("Last");
-		//test.log(LogStatus.INFO, "Set Last Name");
-		//restaurants.setEmailR2(randomEmail);
-		//test.log(LogStatus.INFO, "Set Email");
-		//restaurants.setPassword("12345678");
-		//test.log(LogStatus.INFO, "Set Password");
-		//restaurants.setConfirmPassword("12345678");
-		//test.log(LogStatus.INFO, "Confirm Password");
-		///restaurants.clickCreateAccountButton();
-		//test.log(LogStatus.INFO, "Click Create Account Button");
-		//restaurants.clickCompleteReservationButton();
-		//test.log(LogStatus.INFO, "Click Complete Reservation Button");
-		//restaurants.verifyReservationIsCreated();
+		restaurants.setDate();
+		test.log(LogStatus.INFO, "Set date");
+		restaurants.clickFindATableButton();
+		test.log(LogStatus.INFO, "Click on Find A Table button");
+		restaurants.selectReservationTime();
+		test.log(LogStatus.INFO, "Select Reservation Time");
+		restaurants.clickCreateAccount();
+		test.log(LogStatus.INFO, "Click Create Accaunt");
+		restaurants.setFirstName("First");
+		test.log(LogStatus.INFO, "Set First Name");
+		restaurants.setLastName("Last");
+		test.log(LogStatus.INFO, "Set Last Name");
+		restaurants.setEmailR2(randomEmail);
+		test.log(LogStatus.INFO, "Set Email");
+		restaurants.setPassword("12345678");
+		test.log(LogStatus.INFO, "Set Password");
+		restaurants.setConfirmPassword("12345678");
+		test.log(LogStatus.INFO, "Confirm Password");
+		restaurants.clickCreateAccountButton();
+		test.log(LogStatus.INFO, "Click Create Account Button");
+		restaurants.clickCompleteReservationButton();
+		test.log(LogStatus.INFO, "Click Complete Reservation Button");
+		restaurants.verifyReservationIsCreated();
 		test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
