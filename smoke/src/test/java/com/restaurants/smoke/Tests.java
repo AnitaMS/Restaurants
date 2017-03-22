@@ -45,7 +45,7 @@ public class Tests {
 	
 		
 		
-		//if (browser.equalsIgnoreCase("firefox")) {
+		if (browser.equalsIgnoreCase("firefox")) {
 			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
 
 			System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
@@ -56,14 +56,14 @@ public class Tests {
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 			//driver = new FirefoxDriver(cap);
-	    	report = new ExtentReports("smoke/reports/ReportFireFox.html");
+	    	report = new ExtentReports("smoke/reports/ReportFireFox.html",true);
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
 	
-		//}
-		/*if (browser.equalsIgnoreCase("chrome")) {
+		}
+		if (browser.equalsIgnoreCase("chrome")) {
 			System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP");
 
 			System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *");
@@ -78,14 +78,14 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 
 			driver = new ChromeDriver(cap);
-			report = new ExtentReports("smoke/reports/ReportChrome.html");
+			report = new ExtentReports("smoke/reports/ReportChrome.html",true);
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			report.addSystemInfo(sysInfo);
 			
 			
-		}*/
+		}
 	
 	
 		restaurants = new Restaurants(driver);
