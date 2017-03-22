@@ -1,6 +1,6 @@
 package com.restaurants.smoke;
 
-import org.testng.annotations.AfterClass;
+
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -40,7 +40,11 @@ public class Tests {
 			//DesiredCapabilities cap = DesiredCapabilities.firefox();
 			//cap.setCapability("marionette", true);
 			//driver = new FirefoxDriver(cap);
-	    	report = new ExtentReports("smoke/reports/ReportFireFox.html");
+			
+			//report = new ExtentReports("/home/anita/Desktop/ReportFireFox.html");
+		
+			
+	    	report = new ExtentReports("reports/ReportFireFox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -54,7 +58,11 @@ public class Tests {
 			cap.setCapability("marionette", true);
 			cap.setCapability("recreateChromeDriverSessions", true);
 			driver = new ChromeDriver(cap);
-			report = new ExtentReports("smoke/reports/ReportChrome.html");
+			
+			//report = new ExtentReports("/home/anita/Desktop/ReportFggggggireFox.html");
+			
+			
+			report = new ExtentReports("reports/ReportChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -119,27 +127,25 @@ public class Tests {
 				
 		
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
+			System.out.println(path.toString());
 			String imagePath = test.addScreenCapture(path);
-			test.log(LogStatus.FAIL, "FAIL", imagePath);				
+			test.log(LogStatus.FAIL, "FAIL", imagePath);
+	
 			
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
-		
-		
-		
-	}
-
-	@AfterClass
-	public void close() {
-	
 		if(driver!=null) {
 			driver.close();
 		}
 		report.endTest(test);
 		report.flush();
 		report.close();	
+		
+		
 	}
+
+	
 
 }
