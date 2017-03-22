@@ -156,14 +156,14 @@ public class Restaurants {
 		String actual = myRegistrationText.getText();
 		System.out.println(actual);
 		String expected = "My reservationsxxx";
+		 Reporter.log("|Actual value = " + actual, true);
+	     Reporter.log("|Expected value = " + expected, true);
 	    Assert.assertEquals(actual, actual);
 		if (actual.equals(expected)) {
 			Reporter.log("|PASS  Verifying reservation is successfful");
 		} else {	
 	        Assert.fail();
 			Reporter.log("|FAIL  Verifying reservation is successfful", true);
-		}
-		 Reporter.log("|Actual value = " + actual, true);
-	     Reporter.log("|Expected value = " + expected, true);
+		}	
 	   }
 	}
