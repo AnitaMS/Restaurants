@@ -101,6 +101,7 @@ public class Tests {
 		restaurants.clickCompleteReservationButton();
 		test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
+		test.log(LogStatus.INFO, "Expected value = My reservations");
 		test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
@@ -108,18 +109,20 @@ public class Tests {
 	}
 
 	@AfterMethod
-	public void writeResult(ITestResult result) throws IOException {
-		if (result.getStatus() == ITestResult.SUCCESS) {
+	public void writeResult(ITestResult testResult) throws IOException {
+		if (testResult.getStatus() == ITestResult.SUCCESS) {
 			test.log(LogStatus.PASS, "PASS");
 			Reporter.log("PASS");
-		} else if (result.getStatus() == ITestResult.FAILURE) {
+		} else if (testResult.getStatus() == ITestResult.FAILURE) {
 			test.log(LogStatus.FAIL, "FAIL");
-			Reporter.log("FAIL");			
-			String path = Screenshots.takeScreenshot(driver, result.getName());
+			Reporter.log("FAIL");	
+				
+		
+			String path = Screenshots.takeScreenshot(driver, testResult.getName());
 			String imagePath = test.addScreenCapture(path);
 			test.log(LogStatus.FAIL, "FAIL", imagePath);				
 			
-		} else if (result.getStatus() == ITestResult.SKIP) {
+		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
