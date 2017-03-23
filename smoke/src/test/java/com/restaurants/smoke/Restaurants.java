@@ -181,7 +181,7 @@ public class Restaurants {
 	public void verifyReservationIsCreated() {
 		String actual = myRegistrationText.getText();
 		///System.out.println(actual);
-		String expected = "My reservationsooo";
+		String expected = "My reservations";
 		 Reporter.log("|Actual value = " + actual, true);
 	     Reporter.log("|Expected value = " + expected, true);
 	    Assert.assertEquals(actual, actual);
