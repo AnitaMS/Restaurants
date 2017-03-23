@@ -15,7 +15,7 @@ public class Screenshots {
 		
 		//String directory = "reports/";
 		
-		String directory = "/smoke/reports";
+		String directory = "reports";
 		System.out.println(directory.toString() + fileName.toString());
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
