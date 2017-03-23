@@ -15,7 +15,7 @@ public class Screenshots {
 		
 		//String directory = "reports/";
 		
-		String directory = "/home/anita/git/Restaurants/smoke";
+		String directory = "/var/lib/jenkins/workspace/testy/smoke";
 		System.out.println(directory.toString() + fileName.toString());
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
