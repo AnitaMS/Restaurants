@@ -40,7 +40,7 @@ public class Tests {
 			// cap.setCapability("marionette", true);
 			// driver = new FirefoxDriver(cap);
 
-			// report = new
+		
 			// ExtentReports("/home/anita/Desktop/ReportFireFox.html");
 
 			report = new ExtentReports("/var/lib/jenkins/workspace/testy/smoke/reports/ReportFirefox.html");
