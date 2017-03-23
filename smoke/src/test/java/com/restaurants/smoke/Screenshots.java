@@ -19,7 +19,7 @@ public class Screenshots {
 		
 	//	String directory = "reports/";
 		
-		String directory = "/var/lib/jenkins/workspace/testy/smoke/reports/";
+		String directory = "/var/lib/jenkins/workspace/testy/smoke/reports";
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
 		String destination = directory + fileName;
