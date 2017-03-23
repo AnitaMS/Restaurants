@@ -26,12 +26,12 @@
       <![CDATA[FAIL]]>
     </line>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="34890" started-at="2017-03-23T15:35:49Z" finished-at="2017-03-23T15:36:23Z">
+  <suite name="TestSuite" duration-ms="73338" started-at="2017-03-23T16:07:40Z" finished-at="2017-03-23T16:08:54Z">
     <groups>
     </groups>
-    <test name="Chrome Test" duration-ms="20231" started-at="2017-03-23T15:35:49Z" finished-at="2017-03-23T15:36:09Z">
+    <test name="Chrome Test" duration-ms="44731" started-at="2017-03-23T16:07:40Z" finished-at="2017-03-23T16:08:25Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="beforeClass" is-config="true" duration-ms="4971" started-at="2017-03-23T16:35:49Z" finished-at="2017-03-23T16:35:53Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="beforeClass" is-config="true" duration-ms="25961" started-at="2017-03-23T17:07:40Z" finished-at="2017-03-23T17:08:06Z">
           <params>
             <param index="0">
               <value>
@@ -45,7 +45,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="restaurantsSmokeTest" duration-ms="13942" started-at="2017-03-23T16:35:54Z" finished-at="2017-03-23T16:36:07Z">
+        <test-method status="FAIL" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="restaurantsSmokeTest" duration-ms="17107" started-at="2017-03-23T17:08:06Z" finished-at="2017-03-23T17:08:24Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -84,7 +84,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="writeResult" is-config="true" duration-ms="257" started-at="2017-03-23T16:36:07Z" finished-at="2017-03-23T16:36:08Z">
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="writeResult" is-config="true" duration-ms="699" started-at="2017-03-23T17:08:24Z" finished-at="2017-03-23T17:08:24Z">
           <params>
             <param index="0">
               <value>
@@ -98,15 +98,15 @@
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="tearDown" is-config="true" duration-ms="1024" started-at="2017-03-23T16:36:08Z" finished-at="2017-03-23T16:36:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.restaurants.smoke.Tests@6e1ec318]" name="tearDown" is-config="true" duration-ms="841" started-at="2017-03-23T17:08:24Z" finished-at="2017-03-23T17:08:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.restaurants.smoke.Tests -->
     </test> <!-- Chrome Test -->
-    <test name="FireFox Test" duration-ms="14642" started-at="2017-03-23T15:36:09Z" finished-at="2017-03-23T15:36:23Z">
+    <test name="FireFox Test" duration-ms="28586" started-at="2017-03-23T16:08:25Z" finished-at="2017-03-23T16:08:54Z">
       <class name="com.restaurants.smoke.Tests">
-        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="beforeClass" is-config="true" duration-ms="9265" started-at="2017-03-23T16:36:09Z" finished-at="2017-03-23T16:36:18Z">
+        <test-method status="PASS" signature="beforeClass(java.lang.String)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="beforeClass" is-config="true" duration-ms="22070" started-at="2017-03-23T17:08:25Z" finished-at="2017-03-23T17:08:47Z">
           <params>
             <param index="0">
               <value>
@@ -120,23 +120,23 @@
             </line>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="restaurantsSmokeTest" duration-ms="4785" started-at="2017-03-23T16:36:18Z" finished-at="2017-03-23T16:36:23Z">
+        <test-method status="FAIL" signature="restaurantsSmokeTest()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="restaurantsSmokeTest" duration-ms="5972" started-at="2017-03-23T17:08:47Z" finished-at="2017-03-23T17:08:53Z">
           <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
               <![CDATA[
 Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
 System info: host: 'anita-X550LD', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-66-generic', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/tmp/rust_mozprofile.KSAZmFkUCytI, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.1, platformVersion=4.4.0-66-generic, moz:processID=31724, browserName=firefox, platformName=linux}]
-Session ID: dc7fe8e2-db9c-4203-b402-df8a86ac7347]]>
+Capabilities [{moz:profile=/tmp/rust_mozprofile.A226K3xcuiDJ, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.1, platformVersion=4.4.0-66-generic, moz:processID=3102, browserName=firefox, platformName=linux}]
+Session ID: 487107f6-a5df-4f65-a9f7-2d2648bee5e8]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotVisibleException: 
 Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:43:45 -0700'
 System info: host: 'anita-X550LD', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-66-generic', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/tmp/rust_mozprofile.KSAZmFkUCytI, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.1, platformVersion=4.4.0-66-generic, moz:processID=31724, browserName=firefox, platformName=linux}]
-Session ID: dc7fe8e2-db9c-4203-b402-df8a86ac7347
+Capabilities [{moz:profile=/tmp/rust_mozprofile.A226K3xcuiDJ, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.1, platformVersion=4.4.0-66-generic, moz:processID=3102, browserName=firefox, platformName=linux}]
+Session ID: 487107f6-a5df-4f65-a9f7-2d2648bee5e8
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -173,7 +173,7 @@ Session ID: dc7fe8e2-db9c-4203-b402-df8a86ac7347
             </line>
           </reporter-output>
         </test-method> <!-- restaurantsSmokeTest -->
-        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="writeResult" is-config="true" duration-ms="354" started-at="2017-03-23T16:36:23Z" finished-at="2017-03-23T16:36:23Z">
+        <test-method status="PASS" signature="writeResult(org.testng.ITestResult)[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="writeResult" is-config="true" duration-ms="333" started-at="2017-03-23T17:08:53Z" finished-at="2017-03-23T17:08:53Z">
           <params>
             <param index="0">
               <value>
@@ -187,7 +187,7 @@ Session ID: dc7fe8e2-db9c-4203-b402-df8a86ac7347
             </line>
           </reporter-output>
         </test-method> <!-- writeResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="tearDown" is-config="true" duration-ms="180" started-at="2017-03-23T16:36:23Z" finished-at="2017-03-23T16:36:23Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.restaurants.smoke.Tests@2286778]" name="tearDown" is-config="true" duration-ms="195" started-at="2017-03-23T17:08:53Z" finished-at="2017-03-23T17:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
