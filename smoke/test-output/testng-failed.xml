@@ -8,6 +8,8 @@
         <methods>
           <include name="writeResult"/>
           <include name="writeResult"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
           <include name="restaurantsSmokeTest"/>
           <include name="beforeClass"/>
           <include name="beforeClass"/>
@@ -22,6 +24,8 @@
         <methods>
           <include name="writeResult"/>
           <include name="writeResult"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
           <include name="restaurantsSmokeTest"/>
           <include name="beforeClass"/>
           <include name="beforeClass"/>

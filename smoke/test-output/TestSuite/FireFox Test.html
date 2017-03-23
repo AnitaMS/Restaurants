@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 23 15:50:27 CET 2017</td>
+<td>Started on:</td><td>Thu Mar 23 16:36:09 CET 2017</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23586 ms)</td>
+<tr><td>Total time:</td><td>14 seconds (14642 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,27 +76,53 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.restaurants.smoke.Tests.restaurantsSmokeTest()'><b>restaurantsSmokeTest</b><br>Test class: com.restaurants.smoke.Tests<br/>
-<a href="#Output-890917437" onClick='toggleBox("Output-890917437", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-157488262" onClick='toggleBox("Output-157488262", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-890917437" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-890917437">
+<a href="#Output-157488262" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-157488262">
 Click on restaurant<br/>
-|Actual value = My reservations<br/>
-|Expected value = My reservationsxx<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: null
-	at com.restaurants.smoke.Restaurants.verifyReservationIsCreated(Restaurants.java:191)
-	at com.restaurants.smoke.Tests.restaurantsSmokeTest(Tests.java:120)
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: 
+Build info: version: &apos;unknown&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:43:45 -0700&apos;
+System info: host: &apos;anita-X550LD&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-66-generic&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/tmp/rust_mozprofile.KSAZmFkUCytI, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.1, platformVersion=4.4.0-66-generic, moz:processID=31724, browserName=firefox, platformName=linux}]
+Session ID: dc7fe8e2-db9c-4203-b402-df8a86ac7347
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.restaurants.smoke.Restaurants.clickWorkingHours(Restaurants.java:87)
+	at com.restaurants.smoke.Tests.restaurantsSmokeTest(Tests.java:96)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace890917437", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace890917437'><pre>java.lang.AssertionError: null
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.fail(Assert.java:101)
-	at com.restaurants.smoke.Restaurants.verifyReservationIsCreated(Restaurants.java:191)
-	at com.restaurants.smoke.Tests.restaurantsSmokeTest(Tests.java:120)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace157488262", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace157488262'><pre>org.openqa.selenium.ElementNotVisibleException: 
+Build info: version: &apos;unknown&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:43:45 -0700&apos;
+System info: host: &apos;anita-X550LD&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-66-generic&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/tmp/rust_mozprofile.KSAZmFkUCytI, rotatable=false, timeouts={implicit=0, page load=300000, script=30000}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=52.0.1, platformVersion=4.4.0-66-generic, moz:processID=31724, browserName=firefox, platformName=linux}]
+Session ID: dc7fe8e2-db9c-4203-b402-df8a86ac7347
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:127)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.restaurants.smoke.Restaurants.clickWorkingHours(Restaurants.java:87)
+	at com.restaurants.smoke.Tests.restaurantsSmokeTest(Tests.java:96)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,8 +137,8 @@ Click on restaurant<br/>
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
 </pre></div></td>
-<td>14</td>
-<td>com.restaurants.smoke.Tests@5abca1e0</td></tr>
+<td>4</td>
+<td>com.restaurants.smoke.Tests@2286778</td></tr>
 </table><p>
 </body>
 </html>
