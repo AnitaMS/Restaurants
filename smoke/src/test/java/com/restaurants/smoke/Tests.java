@@ -1,6 +1,5 @@
 package com.restaurants.smoke;
 
-
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -17,7 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -30,56 +29,55 @@ public class Tests {
 	ExtentReports report;
 	ExtentTest test;
 
-
 	@BeforeClass
-	@Parameters({ "browserType"})
-	public void beforeClass( String browser) {
-			
-		if (browser.equalsIgnoreCase("firefox")) {		
-			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");	
+	@Parameters({ "browserType" })
+	public void beforeClass(String browser) {
+
+		if (browser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
 			driver = new FirefoxDriver();
-			//DesiredCapabilities cap = DesiredCapabilities.firefox();
-			//cap.setCapability("marionette", true);
-			//driver = new FirefoxDriver(cap);
-			
-			//report = new ExtentReports("/home/anita/Desktop/ReportFireFox.html");
-		
-			
-	    	report = new ExtentReports("reports/ReportFirefox.html");
+			// DesiredCapabilities cap = DesiredCapabilities.firefox();
+			// cap.setCapability("marionette", true);
+			// driver = new FirefoxDriver(cap);
+
+			// report = new
+			// ExtentReports("/home/anita/Desktop/ReportFireFox.html");
+
+			report = new ExtentReports("reports/ReportFirefox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			sysInfo.put("Firefox", "52.0.1");
-			report.addSystemInfo(sysInfo);	
-		
+			report.addSystemInfo(sysInfo);
+
 		}
-		
-		if (browser.equalsIgnoreCase("chrome")) {		
+
+		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "/home/anita/Desktop/chromedriver99/chromedriver");
-			// driver = new ChromeDriver();	
+			// driver = new ChromeDriver();
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
 			cap.setCapability("marionette", true);
 			cap.setCapability("recreateChromeDriverSessions", true);
 			driver = new ChromeDriver(cap);
-			
-			//report = new ExtentReports("/home/anita/Desktop/ReportFggggggireFox.html");
-			
-			
+
+			// report = new
+			// ExtentReports("/home/anita/Desktop/ReportFggggggireFox.html");
+
 			report = new ExtentReports("reports/ReportChrome.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
 			sysInfo.put("Chrome", "57.0.2987.110");
-			report.addSystemInfo(sysInfo);	
-			
+			report.addSystemInfo(sysInfo);
+
 		}
-	
+
 		restaurants = new Restaurants(driver);
-		baseUrl = "http://polar-crag-51709.herokuapp.com/";	
+		baseUrl = "http://polar-crag-51709.herokuapp.com/";
 		test = report.startTest("Restaurant App Smoke Test");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.get(baseUrl);	
+		driver.get(baseUrl);
 		test.log(LogStatus.INFO, "Application Starting...");
 		Reporter.log("Browser is Starting...");
 	}
@@ -92,11 +90,11 @@ public class Tests {
 		restaurants.clearDateField();
 		test.log(LogStatus.INFO, "Clear date field");
 		restaurants.setDate();
-		test.log(LogStatus.INFO, "Set date");	
+		test.log(LogStatus.INFO, "Set date");
 		restaurants.clickSelectTime();
 		test.log(LogStatus.INFO, "Click on Time");
 		restaurants.clickWorkingHours();
-		test.log(LogStatus.INFO, "Select working hours");	
+		test.log(LogStatus.INFO, "Select working hours");
 		restaurants.clickFindATableButton();
 		test.log(LogStatus.INFO, "Click on Find A Table button");
 		restaurants.selectReservationTime();
@@ -122,7 +120,7 @@ public class Tests {
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
-		
+
 	}
 
 	@AfterMethod
@@ -132,29 +130,29 @@ public class Tests {
 			Reporter.log("PASS");
 		} else if (testResult.getStatus() == ITestResult.FAILURE) {
 			test.log(LogStatus.FAIL, "FAIL");
-			Reporter.log("FAIL");	
-				
-		
+			Reporter.log("FAIL");
+
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
 			System.out.println(path.toString());
 			String imagePath = test.addScreenCapture(path);
 			test.log(LogStatus.FAIL, "FAIL", imagePath);
-	
-			
+
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
 		}
-		if(driver!=null) {
+
+	}
+
+	@AfterClass
+	public void tearDown() {
+		if (driver != null) {
 			driver.close();
 		}
 		report.endTest(test);
 		report.flush();
-		report.close();	
-		
-		
-	}
+		report.close();
 
-	
+	}
 
 }
