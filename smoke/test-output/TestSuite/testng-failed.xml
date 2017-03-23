@@ -17,20 +17,4 @@
       </class> <!-- com.restaurants.smoke.Tests -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
-  <test name="FireFox Test(failed)" parallel="methods">
-    <parameter name="browserType" value="firefox"/>
-    <classes>
-      <class name="com.restaurants.smoke.Tests">
-        <methods>
-          <include name="writeResult"/>
-          <include name="writeResult"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="restaurantsSmokeTest"/>
-          <include name="beforeClass"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- com.restaurants.smoke.Tests -->
-    </classes>
-  </test> <!-- FireFox Test(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->
