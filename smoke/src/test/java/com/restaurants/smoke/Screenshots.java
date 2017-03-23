@@ -2,6 +2,7 @@ package com.restaurants.smoke;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -11,9 +12,12 @@ import org.openqa.selenium.WebDriver;
 public class Screenshots {
 	
 	public static String takeScreenshot(WebDriver driver, String fileName) throws IOException {
-		fileName =  fileName + ".png";
 		
-		//String directory = "reports/";
+		final String photoNum = UUID.randomUUID().toString() + ".png";
+		
+		fileName =  photoNum + ".png";
+		
+	//	String directory = "reports/";
 		
 		String directory = "/var/lib/jenkins/workspace/testy/smoke/reports/";
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
