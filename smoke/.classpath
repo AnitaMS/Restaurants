@@ -58,6 +58,6 @@
 	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/selenium-java-3.0.1/client-combined-3.0.1-nodeps.jar"/>
 	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/selenium-server-standalone-3.2.0.jar"/>
 	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/selenium-server-3.0.1.jar"/>
-	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/extentreports-2.40.jar"/>
+	<classpathentry kind="lib" path="/home/anita/Documents/EclipseWS/seleniumStuff/extentreports-2.41.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

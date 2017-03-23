@@ -64,19 +64,45 @@ public class Restaurants {
 	@FindBy(xpath = ".//div[@class='col-md-12 col-sm-12 col-xs-12 page-title v-align-center'][contains(.,'My')]")
 	WebElement myRegistrationText;
 
+	
+	@FindBy(xpath = "//input[@placeholder='Time']")
+	WebElement selectTime;
+	
+	
 	//////////////////////////////////////////
 	public Restaurants(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	
+	public void clickWorkingHours() throws InterruptedException {
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0,300)", "");
+		//Thread.sleep(3000);
+		Random r = new java.util.Random();
+		List<WebElement> workingHours = driver.findElements(By.xpath(".//*[contains(text(), ' PM')]"));
+		if (!workingHours.isEmpty()) {
+			WebElement randomElement = workingHours.get(r.nextInt(workingHours.size()));
+			randomElement.click();
+		}
+	}
+	
+	
+	
+	
 
+	public void clickSelectTime(){
+		selectTime.click();
+	}
+	
 	public void clearDateField() {
 		datePicker.clear();
 	}
 
 	public void clickRestaurant() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1000)", "");
+		js.executeScript("window.scrollBy(0,300)", "");
 		Thread.sleep(3000);
 		Random r = new java.util.Random();
 		List<WebElement> links = driver.findElements(By.xpath(".//*[@class='img-responsive ember-view']"));
@@ -104,7 +130,7 @@ public class Restaurants {
 	public void selectReservationTime() throws InterruptedException {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,1000)", "");
+		js.executeScript("window.scrollBy(0,10)", "");
 		Thread.sleep(3000);
 		Random r = new java.util.Random();
 		List<WebElement> links = driver.findElements(By.xpath(".//a[@class='btn btn-primary']"));
@@ -155,7 +181,7 @@ public class Restaurants {
 	public void verifyReservationIsCreated() {
 		String actual = myRegistrationText.getText();
 		//System.out.println(actual);
-		String expected = "My reservationsxxx";
+		String expected = "My reservations";
 		 Reporter.log("|Actual value = " + actual, true);
 	     Reporter.log("|Expected value = " + expected, true);
 	    Assert.assertEquals(actual, actual);

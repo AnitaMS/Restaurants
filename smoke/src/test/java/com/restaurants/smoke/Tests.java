@@ -2,6 +2,7 @@ package com.restaurants.smoke;
 
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -44,11 +45,13 @@ public class Tests {
 			//report = new ExtentReports("/home/anita/Desktop/ReportFireFox.html");
 		
 			
-	    	report = new ExtentReports("reports/ReportFireFox.html");
+	    	report = new ExtentReports("reports/ReportFirefox.html");
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
+			sysInfo.put("Firefox", "52.0.1");
 			report.addSystemInfo(sysInfo);	
+		
 		}
 		
 		if (browser.equalsIgnoreCase("chrome")) {		
@@ -66,7 +69,9 @@ public class Tests {
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
-			report.addSystemInfo(sysInfo);			
+			sysInfo.put("Chrome", "57.0.2987.110");
+			report.addSystemInfo(sysInfo);	
+			
 		}
 	
 		restaurants = new Restaurants(driver);
@@ -76,7 +81,7 @@ public class Tests {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);	
 		test.log(LogStatus.INFO, "Application Starting...");
-		Reporter.log("Application Starting...");
+		Reporter.log("Browser is Starting...");
 	}
 
 	@Test
@@ -87,7 +92,11 @@ public class Tests {
 		restaurants.clearDateField();
 		test.log(LogStatus.INFO, "Clear date field");
 		restaurants.setDate();
-		test.log(LogStatus.INFO, "Set date");
+		test.log(LogStatus.INFO, "Set date");	
+		restaurants.clickSelectTime();
+		test.log(LogStatus.INFO, "Click on Time");
+		restaurants.clickWorkingHours();
+		test.log(LogStatus.INFO, "Select working hours");	
 		restaurants.clickFindATableButton();
 		test.log(LogStatus.INFO, "Click on Find A Table button");
 		restaurants.selectReservationTime();
@@ -110,10 +119,10 @@ public class Tests {
 		test.log(LogStatus.INFO, "Click Complete Reservation Button");
 		restaurants.verifyReservationIsCreated();
 		test.log(LogStatus.INFO, "Expected value = My reservations");
-		test.log(LogStatus.INFO, "Application is Closing...");
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
+		
 	}
 
 	@AfterMethod
