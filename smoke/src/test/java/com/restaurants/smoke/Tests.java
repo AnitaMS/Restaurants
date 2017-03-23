@@ -93,7 +93,7 @@ public class Tests {
 		test.log(LogStatus.INFO, "Set date");
 		restaurants.clickSelectTime();
 		test.log(LogStatus.INFO, "Click on Time");
-		restaurants.clickWorkingHours();
+		//restaurants.clickWorkingHours();
 		test.log(LogStatus.INFO, "Select working hours");
 		restaurants.clickFindATableButton();
 		test.log(LogStatus.INFO, "Click on Find A Table button");
@@ -133,10 +133,9 @@ public class Tests {
 			Reporter.log("FAIL");
 
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
-			System.out.println(path.toString());
 			String imagePath = test.addScreenCapture(path);
 			test.log(LogStatus.FAIL, "FAIL", imagePath);
-
+		
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
@@ -151,7 +150,7 @@ public class Tests {
 		}
 		report.endTest(test);
 		report.flush();
-		report.close();
+		
 
 	}
 
