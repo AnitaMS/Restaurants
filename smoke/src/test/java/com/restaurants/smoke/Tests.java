@@ -60,7 +60,7 @@ public class Tests {
 			cap.setCapability("recreateChromeDriverSessions", true);
 			driver = new ChromeDriver(cap);
 
-			// report = new
+			
 			// ExtentReports("/home/anita/Desktop/ReportFggggggireFox.html");
 
 			report = new ExtentReports("/var/lib/jenkins/workspace/testy/smoke/reports/ReportChrome.html");
