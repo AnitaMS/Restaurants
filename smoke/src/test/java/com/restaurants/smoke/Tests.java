@@ -94,11 +94,11 @@ public class Tests {
 		restaurants.clickSelectTime();
 		test.log(LogStatus.INFO, "Click on Time");
 		//restaurants.clickWorkingHours();
-		test.log(LogStatus.INFO, "Select working hours");
-		restaurants.clickFindATableButton();
-		test.log(LogStatus.INFO, "Click on Find A Table button");
-		restaurants.selectReservationTime();
-		test.log(LogStatus.INFO, "Select Reservation Time");
+		//test.log(LogStatus.INFO, "Select working hours");
+		//restaurants.clickFindATableButton();
+		//test.log(LogStatus.INFO, "Click on Find A Table button");
+		//restaurants.selectReservationTime();
+	/*	test.log(LogStatus.INFO, "Select Reservation Time");
 		restaurants.clickCreateAccount();
 		test.log(LogStatus.INFO, "Click Create Accaunt");
 		restaurants.setFirstName("First");
@@ -120,13 +120,16 @@ public class Tests {
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
-
+*/
 	}
 
 	@AfterMethod
 	public void writeResult(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.SUCCESS) {
-			test.log(LogStatus.PASS, "PASS");
+			String path = Screenshots.takeScreenshot(driver, testResult.getName());
+			String imagePath = test.addScreenCapture(path);
+			test.log(LogStatus.PASS, "PASS", imagePath);
+			
 			Reporter.log("PASS");
 		} else if (testResult.getStatus() == ITestResult.FAILURE) {
 			test.log(LogStatus.FAIL, "FAIL");
