@@ -35,10 +35,10 @@ public class Tests {
 
 		if (browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "/home/anita/Desktop/geckodriver/geckodriver");
-			driver = new FirefoxDriver();
-			// DesiredCapabilities cap = DesiredCapabilities.firefox();
-			// cap.setCapability("marionette", true);
-			// driver = new FirefoxDriver(cap);
+			//driver = new FirefoxDriver();
+			 DesiredCapabilities cap = DesiredCapabilities.firefox();
+			 cap.setCapability("marionette", true);
+			driver = new FirefoxDriver(cap);
 
 		
 			// ExtentReports("/home/anita/Desktop/ReportFireFox.html");
