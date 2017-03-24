@@ -95,7 +95,7 @@ public class Tests {
 		test.log(LogStatus.INFO, "Click on Time");
 		//restaurants.clickWorkingHours();
 		//test.log(LogStatus.INFO, "Select working hours");
-		//restaurants.clickFindATableButton();
+		restaurants.clickFindATableButton();
 		//test.log(LogStatus.INFO, "Click on Find A Table button");
 		//restaurants.selectReservationTime();
 	/*	test.log(LogStatus.INFO, "Select Reservation Time");
