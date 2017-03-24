@@ -13,9 +13,9 @@ public class Screenshots {
 	
 	public static String takeScreenshot(WebDriver driver, String fileName) throws IOException {
 		
-		final String photoNum = UUID.randomUUID().toString();
+		//final String photoNum = UUID.randomUUID().toString();
 		
-		fileName =  photoNum + ".png";
+		fileName =  fileName + ".png";
 		
 	//	String directory = "reports/";
 		
