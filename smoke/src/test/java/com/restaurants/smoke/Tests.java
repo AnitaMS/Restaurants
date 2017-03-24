@@ -43,7 +43,10 @@ public class Tests {
 		
 			// ExtentReports("/home/anita/Desktop/ReportFireFox.html");
 
-			report = new ExtentReports("/home/anita/git/Restaurants/smoke/reports/ReportFirefox.html");
+			//report = new ExtentReports("/home/anita/git/Restaurants/smoke/reports/ReportFirefox.html");
+			
+			report = new ExtentReports("/home/anita/.jenkins/workspace/trztrztr/smoke/reports/ReportFirefox.html");
+			
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
@@ -63,7 +66,12 @@ public class Tests {
 			
 			// ExtentReports("/home/anita/Desktop/ReportFggggggireFox.html");
 
-			report = new ExtentReports("/home/anita/git/Restaurants/smoke/reports/ReportChrome.html");
+			
+			//report = new ExtentReports("/home/anita/git/Restaurants/smoke/reports/ReportChrome.html");
+			
+			
+			report = new ExtentReports("/home/anita/.jenkins/workspace/trztrztr/smoke/reports/ReportChrome.html");
+			
 			Map<String, String> sysInfo = new HashMap<String, String>();
 			sysInfo.put("Selenium Version", "3.0.1");
 			sysInfo.put("TestNG Version", "6.10");
