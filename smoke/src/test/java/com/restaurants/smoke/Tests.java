@@ -104,7 +104,7 @@ public class Tests {
 		restaurants.clickWorkingHours();
 		test.log(LogStatus.INFO, "Select working hours");
 		restaurants.clickFindATableButton();
-		test.log(LogStatus.INFO, "Click on Find A Table button");
+		/*test.log(LogStatus.INFO, "Click on Find A Table button");
 		restaurants.selectReservationTime();
 		test.log(LogStatus.INFO, "Select Reservation Time");
 		restaurants.clickCreateAccount();
@@ -128,7 +128,7 @@ public class Tests {
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
-
+*/
 	}
 
 	@AfterMethod
@@ -137,7 +137,9 @@ public class Tests {
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
 			String imagePath = test.addScreenCapture(path);
 			test.log(LogStatus.PASS, "PASS", imagePath);
-			
+			report.endTest(test);
+			report.flush();
+			report.close();
 			Reporter.log("PASS");
 		} else if (testResult.getStatus() == ITestResult.FAILURE) {
 			test.log(LogStatus.FAIL, "FAIL");
@@ -146,7 +148,9 @@ public class Tests {
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
 			String imagePath = test.addScreenCapture(path);
 			test.log(LogStatus.FAIL, "FAIL", imagePath);
-		
+			report.endTest(test);
+			report.flush();
+			report.close();
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			test.log(LogStatus.SKIP, "SKIP");
 			Reporter.log("SKIP");
@@ -159,8 +163,7 @@ public class Tests {
 		if (driver != null) {
 			driver.close();
 		}
-		report.endTest(test);
-		report.flush();
+		
 		
 
 	}
