@@ -146,7 +146,7 @@ public class Tests {
 			Reporter.log("FAIL");
 
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
-			String imagePath = test.addScreenCapture(path);
+			String imagePath = test.addScreencast(path);
 			test.log(LogStatus.FAIL, "FAIL", imagePath);
 			report.endTest(test);
 			report.flush();
