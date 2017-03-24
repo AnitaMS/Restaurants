@@ -136,7 +136,7 @@ public class Tests {
 			Reporter.log("FAIL");
 
 			String path = Screenshots.takeScreenshot(driver, testResult.getName());
-			String imagePath = test.addScreenCapture(path);
+			String imagePath = test.addScreenCapture("./reports");
 			test.log(LogStatus.FAIL, "FAIL", imagePath);
 		
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
