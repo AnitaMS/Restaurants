@@ -93,12 +93,12 @@ public class Tests {
 		test.log(LogStatus.INFO, "Set date");
 		restaurants.clickSelectTime();
 		test.log(LogStatus.INFO, "Click on Time");
-		//restaurants.clickWorkingHours();
-		//test.log(LogStatus.INFO, "Select working hours");
+		restaurants.clickWorkingHours();
+		test.log(LogStatus.INFO, "Select working hours");
 		restaurants.clickFindATableButton();
-		//test.log(LogStatus.INFO, "Click on Find A Table button");
-		//restaurants.selectReservationTime();
-	/*	test.log(LogStatus.INFO, "Select Reservation Time");
+		test.log(LogStatus.INFO, "Click on Find A Table button");
+		restaurants.selectReservationTime();
+		test.log(LogStatus.INFO, "Select Reservation Time");
 		restaurants.clickCreateAccount();
 		test.log(LogStatus.INFO, "Click Create Accaunt");
 		restaurants.setFirstName("First");
@@ -120,7 +120,7 @@ public class Tests {
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
-*/
+
 	}
 
 	@AfterMethod
