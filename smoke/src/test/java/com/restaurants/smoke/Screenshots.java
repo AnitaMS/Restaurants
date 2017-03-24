@@ -17,7 +17,7 @@ public class Screenshots {
 		
 		fileName =  fileName + ".png";
 		
-	//	String directory = "reports/";
+	///	String directory = "reports/";
 		
 		String directory = "/home/anita/git/Restaurants/smoke/reports/";
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
