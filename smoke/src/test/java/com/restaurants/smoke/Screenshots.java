@@ -13,16 +13,16 @@ public class Screenshots {
 	
 	public static String takeScreenshot(WebDriver driver, String fileName) throws IOException {
 		
-		final String photoNum = UUID.randomUUID().toString();
+		//final String photoNum = UUID.randomUUID().toString();
 		
-		fileName = fileName+ photoNum + ".png";
+		fileName =  fileName + ".png";
 		
 	///	String directory = "reports/";
 		
 		//String directory = "/home/anita/git/Restaurants/smoke/reports/";
 		
 		
-		String directory = "/home/anita/.jenkins/workspace/trztrztr/smoke/reports/";
+		String directory = "/smoke/reports/";
 		
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
