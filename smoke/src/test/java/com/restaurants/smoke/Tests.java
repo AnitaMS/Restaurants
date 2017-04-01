@@ -85,13 +85,12 @@ public class Tests {
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get(baseUrl);
 		test.log(LogStatus.INFO, "Application Starting...");
-		Reporter.log("Browser is Starting...");
+		
 	}
 
 	@Test
 	public void restaurantsSmokeTest() throws InterruptedException, ParseException {
-		restaurants.clickRestaurant();
-		Reporter.log("Click on restaurant");
+		restaurants.clickRestaurant();		
 		test.log(LogStatus.INFO, "Click on restaurant");
 		restaurants.clearDateField();
 		test.log(LogStatus.INFO, "Clear date field");
@@ -102,7 +101,7 @@ public class Tests {
 		restaurants.clickWorkingHours();
 		test.log(LogStatus.INFO, "Select working hours");
 		restaurants.clickFindATableButton();
-		/*test.log(LogStatus.INFO, "Click on Find A Table button");
+		test.log(LogStatus.INFO, "Click on Find A Table button");
 		restaurants.selectReservationTime();
 		test.log(LogStatus.INFO, "Select Reservation Time");
 		restaurants.clickCreateAccount();
@@ -126,18 +125,12 @@ public class Tests {
 		Reporter.log("Application is Closing...");
 		test.assignAuthor("Anita", "Sredic");
 		test.assignCategory("Restaurant App - Smoke Test");
-*/
+
 	}
 
 	@AfterMethod
 	public void writeResult(ITestResult testResult) throws IOException {
-		if (testResult.getStatus() == ITestResult.SUCCESS) {
-			String path = Screenshots.takeScreenshot(driver, testResult.getName());
-			String imagePath = test.addScreenCapture(path);
-			test.log(LogStatus.PASS, "PASS", imagePath);
-			report.endTest(test);
-			report.flush();
-			report.close();
+		if (testResult.getStatus() == ITestResult.SUCCESS) {	
 			Reporter.log("PASS");
 		} else if (testResult.getStatus() == ITestResult.FAILURE) {
 			test.log(LogStatus.FAIL, "FAIL");

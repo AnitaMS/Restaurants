@@ -102,7 +102,7 @@ public class Restaurants {
 
 	public void clickRestaurant() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,300)", "");
+		js.executeScript("window.scrollBy(0,100)", "");
 		Thread.sleep(3000);
 		Random r = new java.util.Random();
 		List<WebElement> links = driver.findElements(By.xpath(".//*[@class='img-responsive ember-view']"));
@@ -180,7 +180,7 @@ public class Restaurants {
 
 	public void verifyReservationIsCreated() {
 		String actual = myRegistrationText.getText();
-		String expected = "My reservationsxxx";
+		String expected = "My reservations";
 		 Reporter.log("|Actual value = " + actual, true);
 	     Reporter.log("|Expected value = " + expected, true);
 	    Assert.assertEquals(actual, actual);

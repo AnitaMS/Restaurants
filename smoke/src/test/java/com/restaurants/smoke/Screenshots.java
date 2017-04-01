@@ -13,11 +13,10 @@ public class Screenshots {
 	
 	public static String takeScreenshot(WebDriver driver, String fileName) throws IOException {
 		
-		//final String photoNum = UUID.randomUUID().toString();
+	
 		
 		fileName =  fileName + ".png";
 		
-	///	String directory = "reports/";
 		
 		String directory = "/home/anita/git/Restaurants/smoke/reports/";
 		
