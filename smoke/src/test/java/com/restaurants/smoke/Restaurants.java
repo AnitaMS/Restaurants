@@ -102,7 +102,7 @@ public class Restaurants {
 
 	public void clickRestaurant() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,100)", "");
+		js.executeScript("window.scrollBy(0,300)", "");
 		Thread.sleep(3000);
 		Random r = new java.util.Random();
 		List<WebElement> links = driver.findElements(By.xpath(".//*[@class='img-responsive ember-view']"));
