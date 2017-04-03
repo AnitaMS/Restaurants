@@ -79,7 +79,7 @@ public class Tests {
 		}
 
 		restaurants = new Restaurants(driver);
-		baseUrl = "http://polar-crag-51709.herokuapp.com/";
+		baseUrl = "https://polar-crag-51709.herokuapp.com/";
 		test = report.startTest("Restaurant App Smoke Test");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
