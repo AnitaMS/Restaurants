@@ -18,10 +18,10 @@ public class Screenshots {
 		fileName =  fileName + ".png";
 		
 		
-		String directory = "/home/anita/git/Restaurants/smoke/reports/";
+		//String directory = "/home/anita/git/Restaurants/smoke/reports/";
 		
 		
-		//String directory = "/home/anita/.jenkins/workspace/trztrztr/smoke/reports/";
+		String directory = "/home/anita/.jenkins/workspace/Restaurant App Smoke Test/smoke/reports";
 		
 		File sourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(sourceFile, new File(directory + fileName));
